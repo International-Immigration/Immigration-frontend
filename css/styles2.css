@@ -1653,7 +1653,7 @@
 
 .french-hero-section {
   position: relative;
-  background: url('/frontend/assets/assets/french/french-hero.png') no-repeat center center/cover;
+  background: url('./assets/assets/french/french-hero.png') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   align-items: center;
