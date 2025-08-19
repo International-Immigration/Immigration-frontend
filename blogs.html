@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #053f6a;
+      --accent: #f0d321;
+      --light: #fffcea;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--primary);
+    }
+    /* NAVBAR STYLES */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: transparent;
+            backdrop-filter: blur(1px);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 0px;
+            padding-left: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+        
+        .logo img {
+            max-height: 60px;
+            height: auto;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-family: fredoka;
+            align-items: center;
+            font-weight: 400;
+            padding-right: 70px;
+        }
+
+        .nav-links a,
+        .selected {
+            position: relative;
+            text-decoration: none;
+            color: #053f6a;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover,
+        .selected:hover {
+            background-color: #f0d321;
+            color: #053f6a;
+        }
+
+        .dropdown {
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fffcea;
+            border-radius: 4px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            display: none;
+            flex-direction: column;
+            min-width: 120px;
+            z-index: 99;
+        }
+
+        .options a {
+            padding: 10px 12px;
+            text-decoration: none;
+            color: #053f6a;
+            white-space: nowrap;
+        }
+
+        .options a:hover {
+            background-color: #f0d321;
+            color: #053f6a;
+        }
+
+        .dropdown:hover .options {
+            display: flex;
+        }
+
+        /* Hamburger menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1100;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #053f6a;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hamburger animation to cross */
+        #menu-toggle:checked + .hamburger span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        #menu-toggle:checked + .hamburger span:nth-child(2) {
+            opacity: 0;
+        }
+
+        #menu-toggle:checked + .hamburger span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Hide checkbox */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: #fffcea;
+                backdrop-filter: blur(8px);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+                border-radius: 8px;
+                display: none;
+                width: 200px;
+                gap: 10px;
+            }
+
+            #menu-toggle:checked ~ .nav-links {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+                padding-right: 20px;
+            }
+
+            .dropdown .options {
+                position: static;
+                display: none;
+                box-shadow: none;
+                background: transparent;
+                padding-left: 15px;
+            }
+
+            .dropdown.active .options {
+                display: flex;
+            }
+
+            .nav-container {
+                padding-left: 26px;
+                padding-right: 23px;
+            }
+            
+            .nav-links a, .selected {
+                color: #000000;
+            }
+        }
+        @media (max-width:480px){
+            .logo img{
+                padding: 4px;
+            }
+        }
+    /*Blog sections*/
+    h2.section-title1{
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 3.5rem;
+      color: var(--light);
+    }
+    h2.section-title {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    /* Latest Blog Section */
+    .latest-blog {
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    .latest-blog .blog-card {
+      max-width: 800px;
+      background-color: var(--light);
+      color: var(--primary);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .latest-blog .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .latest-blog .blog-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .latest-blog .text-section {
+      padding: 20px;
+    }
+
+    .read-toggle {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: var(--accent);
+      color: var(--primary);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .read-toggle:hover {
+      background-color: #e4c117;
+    }
+
+    /* Previous Blogs Section */
+    .previous-blogs {
+      padding: 40px 20px;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .blog-grid .blog-card {
+      background-color: var(--light);
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .blog-grid .blog-card:hover {
+      transform: scale(1.03);
+    }
+
+    .blog-grid .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-grid .text-section {
+      padding: 15px;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 40px 20px;
+    }
+
+    .modal-content {
+      background-color: var(--light);
+      color: var(--primary);
+      margin: auto;
+      padding: 20px;
+      max-width: 700px;
+      border-radius: 10px;
+      position: relative;
+      height: 90%;
+      overflow-x: scroll;
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .latest-blog .blog-card, .modal-content {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .modal-content {
+        padding: 15px;
+        overflow-x: scroll;
+        height: 90%;
+      }
+      .footer-links ul{
+        padding: 0px;
+      }
+      h2.section-title1{
+        font-size: 2.5rem;
+      }
+    }
+     /*$$$$$$$$$$$$44   WHATSAPP FLOATING $$$$$$$$$$$$$$$$$*/
+        .whatsapp-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      background-color: #25d366;
+      border-radius: 30px;
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      z-index: 1000;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-container:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp-container i {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    /*============ foooter ====================*/
+    footer {
+      background: #fff7c7;
+      color: #ccc;
+      padding: 40px 20px 20px;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .footer-main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-left {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo img {
+      width:auto;
+      height: 71px;
+    }
+
+    .footer-logo h2 {
+      font-size: 1.2rem;
+      color: white;
+      font-family: outfit;
+    }
+
+    .footer-left p {
+      margin: 15px 0;
+      max-width: 350px;
+      line-height: 1.2;
+      color: #053f6a;
+      font-size: 13px;
+    }
+
+    .footer-socials-heading {
+      margin-top: 15px;
+      color: #f0d321;
+      font-weight: bold;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-socials a {
+      background: #053f6a;
+      color: #fff;
+      font-size: 14px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .footer-socials a:hover {
+      background-color: #f0d321;
+      color: #053f6a;
+    }
+
+    .footer-links,
+    .footer-contact {
+      min-width: 180px;
+    }
+
+    .footer-links h3,
+    .footer-contact h3 {
+      color: #f0d321;
+      margin-bottom: 10px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links ul li a {
+      text-decoration: none;
+      color: #053f6a;
+      transition: color 0.2s;
+    }
+
+    .footer-links ul li a:hover {
+      color: #f0d321;
+    }
+
+    .footer-contact p {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #053f6a;
+    }
+
+    .footer-contact i {
+      color: #053f6a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #053f6a;
+      margin-top: 30px;
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .footer-bottom p {
+      font-size: 14px;
+      color: #053f6a;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .footer-main {
+        flex-direction: column;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-left p{
+        max-width: 450px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="LOGO"></div>
+
+            <input type="checkbox" id="menu-toggle" />
+            <label class="hamburger" for="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="nav-links">
+                <a href="/frontend/index.html">Home</a>
+                <a href="/frontend/about.html">About</a>
+                <a href="#visa-services-wrapper">Services</a>
+
+                <div class="dropdown">
+                    <div class="selected">Languages
+                        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="options">
+                        <a href="/frontend/german.html">German</a>
+                        <a href="/frontend/french.html">French</a>
+                        <a href="/frontend/ielts.html">IELTS</a>
+            <a href="/frontend/toefl.html">Toefl</a>
+                    </div>
+                </div>
+
+                <a href="/frontend/contact.html">Contact</a>
+                <a href="/frontend/blogs.html">Blogs</a>
+            </div>
+        </div>
+    </nav>
+
+  <section class="latest-blog">
+    <h2 class="section-title1">Featured Blog</h2>
+    <div id="latest-blog"></div>
+  </section>
+
+  <section class="previous-blogs">
+    <h2 class="section-title">Previous Articles</h2>
+    <div class="blog-grid" id="previous-blogs"></div>
+  </section>
+
+  <!-- Blog Modal -->
+  <div id="blogModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalContent"></p>
+    </div>
+  </div>
+  <!-- WhatsApp Floating Help Button -->
+  <a
+    href="https://api.whatsapp.com/send?phone=918779676232"
+    class="whatsapp-container"
+    target="_blank"
+  >
+    <i class="fab fa-whatsapp"></i>
+    Need Help?
+  </a>
+  <!-- =================  footer ==================   -->
+   <!-- Footer Starts -->
+  <footer class="footer">
+    <div class="footer-main">
+      <!-- Left Column -->
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="Logo" />
+        </div>
+        <p>
+          Your premier destination for comprehensive Educational Consulting Services. We empower ambitious students worldwide with the knowledge and guidance they need to excel in their pursuit of higher education.
+        </p>
+        <div class="footer-socials-heading">Follow us</div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61550893840254&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/international_immigration._/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/internationalimmigration/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Column -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> admin@internationalimmigration.com</p>
+        <p><i class="fas fa-phone-alt"></i> +91 877 967 6232</p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© 2025 International Immigration. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const BACKEND_URL="https......."
+    function escapeHTML(str) {
+      if (!str) return '';
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function truncateText(text, limit = 200) {
+      return text.length > limit ? text.slice(0, limit) + "..." : text;
+    }
+
+    function openModal(title, content) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalContent').innerText = content;
+      document.getElementById('blogModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('blogModal').style.display = 'none';
+    }
+
+    fetch(`${BACKEND_URL}/api/blogs`)
+      .then(res => res.json())
+      .then(data => {
+        const latestBlogContainer = document.getElementById('latest-blog');
+        const previousBlogsContainer = document.getElementById('previous-blogs');
+
+        const formatDate = (dateStr) => {
+          const date = new Date(dateStr);
+          return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+        };
+
+        function createBlogCard(blog, isLatest = false) {
+          const fullText = escapeHTML(blog.content);
+          const truncated = truncateText(fullText);
+          const isTruncated = fullText.length > 200;
+
+          const blogCard = document.createElement('div');
+          blogCard.className = 'blog-card';
+
+          blogCard.innerHTML = `
+            <img src="${blog.imageUrl}" alt="Blog Image" />
+            <div class="text-section">
+              <h3 class="blog-title">${escapeHTML(blog.title)}</h3>
+              <p class="blog-text">${isTruncated ? truncated : fullText}</p>
+              <p class="date"><strong>Date:</strong> ${formatDate(blog.date)}</p>
+              ${isTruncated ? '<button class="read-toggle">Read more</button>' : ''}
+            </div>
+          `;
+
+          const btn = blogCard.querySelector('.read-toggle');
+          if (btn) {
+            btn.addEventListener('click', () => openModal(blog.title, blog.content));
+          }
+
+          return blogCard;
+        }
+
+        if (data.length > 0) {
+          latestBlogContainer.appendChild(createBlogCard(data[0], true));
+          data.slice(1).forEach(blog => {
+            previousBlogsContainer.appendChild(createBlogCard(blog));
+          });
+        } else {
+          latestBlogContainer.innerHTML = "<p>No blogs yet.</p>";
+        }
+      })
+      .catch(err => {
+        console.error("Error fetching blogs:", err);
+      });
+      // NAVBAR++++++++++++
+           // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      
+      // Handle dropdowns in mobile view
+      const dropdowns = document.querySelectorAll(".dropdown");
+      
+      dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector(".selected");
+        
+        selected.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdown.classList.toggle("active");
+          }
+        });
+      });
+      
+      // Close dropdowns when clicking outside
+      document.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+          dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("active");
+            }
+          });
+          
+          // Also close the mobile menu if clicking outside
+          if (!e.target.closest(".nav-container") && menuToggle.checked) {
+            menuToggle.checked = false;
+            navLinks.style.display = "none";
+          }
+        }
+      });
+  </script>
+</body>
+</html>

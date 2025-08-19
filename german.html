@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>International Immigration</title>
+<link rel="stylesheet" href="/frontend/css/styleG.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!--NavBar-->
+      <nav class="navbar">
+    <div class="logo"><img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt=""></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/frontend/index.html">Home</a></li>
+      <li><a href="#Cources">Courses</a></li>
+      <li><a href="/frontend/contact.html">Contact</a></li>
+      <div class="dropdown">
+          <div class="selected">Languages
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" fill="none"/>
+            </svg>
+          </div>
+          <div class="options">
+            <a href="/frontend/german.html">German</a>
+            <a href="/frontend/french.html">French</a>
+            <a href="/frontend/ielts.html">IELTS</a>
+            <a href="/frontend/toefl.html">Toefl</a>
+          </div>
+        </div>
+      <li><a href="/frontend/about.html">About</a></li>
+      <li><a href="/frontend/blogs.html">Blogs</a></li>
+    </ul>
+   <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+
+
+
+<!--HEROOOOOOOOOOOO-->
+<section class="hero-section">
+    <div class="hero-image-container">
+    <div class="speech-box">Hallo!</div>
+      <img src="/frontend/assets/assetsM/new-img.png" alt="German Language Training">
+    </div>
+    <div class="hero-text-content">
+      <h1 class="hero-heading">Master German Language.</h1>
+      <h1 class="hero-subheading">Unlock Global Opportunities.</h1>
+      <p class="hero-description">
+        Live online training to help you speak, study, or work in Germany with confidence.
+      </p>
+      <div class="hero-buttons">
+        <a href="#Cources" class="hero-button btn-yellow"><i class="fa-solid fa-user-check"></i>Enroll Now</a>
+        <a href="#getInTouch" class="hero-button btn-red"><i class="fa-solid fa-phone"></i> Book a Free Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!--Teachers-->
+  <section class="trainers-section" id="Teachers">
+  <h2><span>Our Trainers</span></h2>
+
+  <div class="trainer-box">
+    <div class="trainer-stats">
+      
+      <div class="trainer-stat">
+        <div class="icon-box">
+          <img src="/frontend/assets/Immigration-main/assets/training2.png" alt="Trainers Icon" />
+        </div>
+        <h3>20</h3>
+        <p>Certified Trainers</p>
+      </div>
+
+      <div class="trainer-stat">
+        <div class="icon-box">
+          <img src="/frontend/assets/Immigration-main/assets/self-improvement.png" alt="Experience Icon" />
+        </div>
+        <h3>3.5+</h3>
+        <p>Years Experience</p>
+      </div>
+
+      <div class="trainer-stat">
+        <div class="icon-box">
+          <img src="/frontend/assets/Immigration-main/assets/contract.png" alt="Goethe Icon" />
+        </div>
+        <h3>100%</h3>
+        <p>Goethe Certified</p>
+      </div>
+
+    </div>
+
+    <p class="trainer-desc">
+      We have a team of <strong>20 certified trainers</strong> with an average of <strong>3.5+ years experience</strong>, all of whom have successfully
+      passed the <strong>Goethe German Language Exam</strong> themselves.
+    </p>
+  </div>
+</section>
+
+  <!--Classes offered-->
+<section class="page-section" id="Cources">
+  <small class="intro-text">Learn German Your Way</small>
+  <h2 class="section-title">Type of Classes We Offer</h2>
+  <div class="plans-grid">
+    <div class="plan-card">
+      <i class="fas fa-people-group plan-icon"></i>
+      <h3 class="plan-name">Group Classes</h3>
+      <p class="plan-details">Small Group (4 students): ₹14,500<br>Large Group (10 students): ₹7,500</p>
+      <div class="plan-price">From ₹7,500</div>
+      <button class="action-button" onclick="openForm('Group Classes')">Enquire</button>
+    </div>
+    <div class="plan-card">
+      <i class="fas fa-user-tie plan-icon"></i>
+      <h3 class="plan-name">1-on-1 Training</h3>
+      <p class="plan-details">₹599 per session (40 sessions per level)<br>Personal mentorship & schedule flexibility</p>
+      <div class="plan-price">₹599 / session</div>
+      <button class="action-button" onclick="openForm('1-on-1 Training')">Enquire</button>
+    </div>
+    <div class="plan-card">
+      <i class="fas fa-laptop plan-icon"></i>
+      <h3 class="plan-name">Self Study Package</h3>
+      <p class="plan-details">Live Recorded Sessions + E-books (Textbook, Workbook, Glossary)<br>5 Full Length Mock Tests</p>
+      <div class="plan-price">₹1,999</div>
+      <button class="action-button" onclick="openForm('Self Study Package')">Enquire</button>
+    </div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="inquiryModal">
+  <div class="modal-box">
+    <h3 class="modal-title">Enquiry Form</h3>
+    <form id="enquiryForm">
+      <label for="level" class="form-label">Course Type</label>
+      <input type="text" id="level" name="level" readonly class="form-field" />
+
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" id="name" name="name" required class="form-field" />
+
+      <label for="email" class="form-label">Email</label>
+      <input type="email" id="email" name="email" required class="form-field" />
+
+      <label for="message" class="form-label">Message</label>
+      <textarea id="message" name="message" rows="3" class="form-textarea"></textarea>
+
+      <button type="submit" class="submit-button">Submit</button>
+      <button type="button" class="cancel-button" onclick="closeForm()">Cancel</button>
+    </form>
+    <div id="formMessage"></div>
+  </div>
+</div>
+
+<!--///////////////////   COURCES///////////////////////////////-->
+ <div class="gcl-wrapper" id="courses">
+    <section class="gcl-section">
+      <h2 class="gcl-title">
+        Structured and Certified Courses<br>
+        <span class="gcl-subtitle">A1 to C2</span>
+      </h2>
+
+      <div class="gcl-grid">
+        <!-- A1 -->
+        <div class="gcl-card">
+          <div class="gcl-svg-container">
+            <img src="/frontend/assets/Immigration-main/assets/A1.png" alt="A1" />
+          </div>
+          <div class="gcl-level">A1</div>
+          <div class="gcl-hover-info">
+            <div class="gcl-hover-title">Beginner</div>
+            <ul class="gcl-hover-list">
+              <li>Greetings and introductions</li>
+              <li>German alphabet</li>
+              <li>Basic sentence formation</li>
+              <li>Numbers and expressions</li>
+            </ul>
+            <button class="gcl-book-btn">Book Now</button>
+          </div>
+        </div>
+
+        <!-- A2 -->
+        <div class="gcl-card">
+          <div class="gcl-svg-container">
+            <img src="/frontend/assets/Immigration-main/assets/A2.png" alt="A2" />
+          </div>
+          <div class="gcl-level">A2</div>
+          <div class="gcl-hover-info">
+            <div class="gcl-hover-title">Elementary</div>
+            <ul class="gcl-hover-list">
+              <li>Everyday conversations</li>
+              <li>Understanding directions</li>
+              <li>Daily routines</li>
+              <li>Short texts and grammar</li>
+            </ul>
+            <button class="gcl-book-btn">Book Now</button>
+          </div>
+        </div>
+
+        <!-- B1 -->
+        <div class="gcl-card">
+          <div class="gcl-svg-container">
+            <img src="/frontend/assets/Immigration-main/assets/B1.png" alt="B1" />
+          </div>
+          <div class="gcl-level">B1</div>
+          <div class="gcl-hover-info">
+            <div class="gcl-hover-title">Intermediate</div>
+            <ul class="gcl-hover-list">
+              <li>Talk about hobbies and work</li>
+              <li>Describe events and feelings</li>
+              <li>Express opinions</li>
+              <li>Read and write short essays</li>
+            </ul>
+            <button class="gcl-book-btn">Book Now</button>
+          </div>
+        </div>
+
+        <!-- B2 -->
+        <div class="gcl-card">
+          <div class="gcl-svg-container">
+            <img src="/frontend/assets/Immigration-main/assets/B2.png" alt="B2" />
+          </div>
+          <div class="gcl-level">B2</div>
+          <div class="gcl-hover-info">
+            <div class="gcl-hover-title">Upper-Intermediate</div>
+            <ul class="gcl-hover-list">
+              <li>Understand complex texts</li>
+              <li>Engage in debates</li>
+              <li>Write formal letters</li>
+              <li>Advanced grammar skills</li>
+            </ul>
+            <button class="gcl-book-btn">Book Now</button>
+          </div>
+        </div>
+
+        <!-- C1 -->
+        <div class="gcl-card">
+          <div class="gcl-svg-container">
+            <img src="/frontend/assets/Immigration-main/assets/C1.png" alt="C1" />
+          </div>
+          <div class="gcl-level">C1</div>
+          <div class="gcl-hover-info">
+            <div class="gcl-hover-title">Advanced</div>
+            <ul class="gcl-hover-list">
+              <li>Academic vocabulary & texts</li>
+              <li>Fluent and spontaneous speaking</li>
+              <li>Understand idioms</li>
+              <li>Prepare for professional settings</li>
+            </ul>
+            <button class="gcl-book-btn">Book Now</button>
+          </div>
+        </div>
+
+        <!-- C2 -->
+        <div class="gcl-card">
+          <div class="gcl-svg-container">
+            <img src="/frontend/assets/Immigration-main/assets/C2.png" alt="C2" />
+          </div>
+          <div class="gcl-level">C2</div>
+          <div class="gcl-hover-info">
+            <div class="gcl-hover-title">Mastery</div>
+            <ul class="gcl-hover-list">
+              <li>Native-like fluency</li>
+              <li>Understand subtle expressions</li>
+              <li>Professional tone and writing</li>
+              <li>Handle any conversation context</li>
+            </ul>
+            <button class="gcl-book-btn">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+<!--,,,,,,,,,,,,,,,,,,,,,OUR STUDENT FLYING,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+
+<!-- <div class="container">
+    <h1 >Our Student's Global Journey</h1>
+
+    <div class="map-container" id="mapSection">
+      <img class="world-map" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1200px-World_map_-_low_resolution.svg.png" alt="World Map" />
+    </div>
+
+    <div class="stats-container">
+      <div class="stat-item"><div class="stat-number" data-count="25">0</div><div class="stat-country">Germany</div></div>
+      <div class="stat-item"><div class="stat-number" data-count="40">0</div><div class="stat-country">Canada</div></div>
+      <div class="stat-item"><div class="stat-number" data-count="55">0</div><div class="stat-country">Australia</div></div>
+      <div class="stat-item"><div class="stat-number" data-count="70">0</div><div class="stat-country">USA</div></div>
+      <div class="stat-item"><div class="stat-number" data-count="85">0</div><div class="stat-country">UK</div></div>
+      <div class="stat-item"><div class="stat-number" data-count="100">0</div><div class="stat-country">other's</div></div>
+    </div>
+  </div> -->
+
+  
+<!--  ================EXAMS WE PREPARE FOR==============      -->
+  <section class="exams-carousel">
+  <h2>Exams We Prepare For</h2>
+
+  <div class="card-3d">
+    <div><img src="/frontend/assets/Immigration-main/assets/ielts.jpg" alt="IELTS"></div>
+    <div><img src="/frontend/assets/Immigration-main/assets/toefl.jpg" alt="TOEFL"></div>
+    <div><img src="/frontend/assets/Immigration-main/assets/gre.jpg" alt="GRE"></div>
+    <div><img src="/frontend/assets/Immigration-main/assets/gmat.jpg" alt="GMAT"></div>
+    <div><img src="/frontend/assets/Immigration-main/assets/goethe.jpg" alt="goethe"></div>
+    <div><img src="/frontend/assets/Immigration-main/assets/pteee.png" alt="PTE"></div>
+    
+  
+  </div>
+</section>
+
+<!--                      TESTIMONIALS                            -->
+ <section class="testimonial-section">
+  <h2>What Our Students Say</h2>
+  <p>Hear from those who took the leap to learn German with us!</p>
+
+  <div class="carousel-wrapper" id="carousel">
+    <div class="testimonial-track" id="track">
+      <div class="testimonial-card">
+        <p class="testimonial-text">“Thanks to International Immigration and Akash’s guidance, the process of moving abroad felt so much easier. Akash’s support, from program selection to the final visa steps, made every part of the journey smooth and worry-free. If you’re looking for genuine, dedicated help, this is it!”</p>
+        <p class="testimonial-name">— Disha Gaikar.</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">“Had really good experience with setting up things in Germany. The admission process was smooth and everything was taken care by the team.
+Thank you so much!”</p>
+        <p class="testimonial-name">— Aasawari Deshpande.</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">“Had the best coaching and motivation for my preparation within 15 days. Best ideas, tricks and methodology where thought with sample questions and answers. I really do appreciate the effort of Akash the incharge and Somi mam the mentor for providing me this opportunity.”</p>
+        <p class="testimonial-name">— Moses Emmanuel.</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">“I had a good experience and I'm satisfied with the service. 3 months ago i flied to Germany”</p>
+        <p class="testimonial-name">— Jagruti Penkar.</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">“These people have the best counsellors, communication is well-maintained and problems are resolved asap. I highly recommend international immigration.”</p>
+        <p class="testimonial-name">— Anjali Jain.</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">“Excellent services and very helpful, definitely recommend to anyone looking to move abroad for education / jobs.”</p>
+        <p class="testimonial-name">— Sanya Limaye.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--..........................FOUNDERS WORDS............-->
+
+<section class="founder-section">
+    <div class="founder-image">
+      <div class="circle">
+        <img src="/frontend/assets/Immigration-main/assets/Founder-profile.png" alt="Founder Photo">
+      </div>
+    </div>
+
+    
+    <div class="founder-content">
+      <h2>Words from Our Founder</h2>
+      <p>
+You’re ready for more. The world’s ready for you. And we’re ready to make it possible.      </p>
+      <div class="founder-buttons">
+        <a href="https://www.linkedin.com/in/akashhjaiswal/" target="_blank">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=918779676232" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=admin@internationalimmigration.com" target="_blank">
+          <i class="fas fa-envelope"></i> Gmail
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+<!--///////////////////////  CONTACT HEADING////////////////////-->
+<div class="contact-heading" id="contact-section">
+  <h1>Still Have Questions?</h1>
+</div>
+<!-- @@@@@@@@@@@@@@@ CONTACT PAGE@@@@@@@@@@@@@@@-->
+ <section class="contact-page" id="getInTouch">
+  <div class="contact-container">
+    <div class="contact-form">
+      <h2>Get in Touch</h2>
+      <form  id="contactForm">
+        <input type="text" placeholder="First Name" name="firstName" required />
+        <input type="text" placeholder="Last Name" name="lastName" required />
+        <div style="display: flex; gap: 10px;">
+          <select style="flex: 0.3;" name="countryCode" required>
+            <option value="+1">+1 (USA/Canada)</option>
+<option value="+7">+7 (Russia/Kazakhstan)</option>
+<option value="+20">+20 (Egypt)</option>
+<option value="+27">+27 (South Africa)</option>
+<option value="+30">+30 (Greece)</option>
+<option value="+31">+31 (Netherlands)</option>
+<option value="+32">+32 (Belgium)</option>
+<option value="+33">+33 (France)</option>
+<option value="+34">+34 (Spain)</option>
+<option value="+36">+36 (Hungary)</option>
+<option value="+39">+39 (Italy)</option>
+<option value="+40">+40 (Romania)</option>
+<option value="+41">+41 (Switzerland)</option>
+<option value="+43">+43 (Austria)</option>
+<option value="+44">+44 (UK)</option>
+<option value="+45">+45 (Denmark)</option>
+<option value="+46">+46 (Sweden)</option>
+<option value="+47">+47 (Norway)</option>
+<option value="+48">+48 (Poland)</option>
+<option value="+49">+49 (Germany)</option>
+<option value="+51">+51 (Peru)</option>
+<option value="+52">+52 (Mexico)</option>
+<option value="+53">+53 (Cuba)</option>
+<option value="+54">+54 (Argentina)</option>
+<option value="+55">+55 (Brazil)</option>
+<option value="+56">+56 (Chile)</option>
+<option value="+57">+57 (Colombia)</option>
+<option value="+58">+58 (Venezuela)</option>
+<option value="+60">+60 (Malaysia)</option>
+<option value="+61">+61 (Australia)</option>
+<option value="+62">+62 (Indonesia)</option>
+<option value="+63">+63 (Philippines)</option>
+<option value="+64">+64 (New Zealand)</option>
+<option value="+65">+65 (Singapore)</option>
+<option value="+66">+66 (Thailand)</option>
+<option value="+81">+81 (Japan)</option>
+<option value="+82">+82 (South Korea)</option>
+<option value="+84">+84 (Vietnam)</option>
+<option value="+86">+86 (China)</option>
+<option value="+90">+90 (Turkey)</option>
+<option value="+91" selected>+91 (India)</option>
+<option value="+92">+92 (Pakistan)</option>
+<option value="+93">+93 (Afghanistan)</option>
+<option value="+94">+94 (Sri Lanka)</option>
+<option value="+95">+95 (Myanmar)</option>
+<option value="+98">+98 (Iran)</option>
+<option value="+212">+212 (Morocco)</option>
+<option value="+213">+213 (Algeria)</option>
+<option value="+216">+216 (Tunisia)</option>
+<option value="+218">+218 (Libya)</option>
+<option value="+220">+220 (Gambia)</option>
+<option value="+221">+221 (Senegal)</option>
+<option value="+222">+222 (Mauritania)</option>
+<option value="+223">+223 (Mali)</option>
+<option value="+224">+224 (Guinea)</option>
+<option value="+225">+225 (Ivory Coast)</option>
+<option value="+226">+226 (Burkina Faso)</option>
+<option value="+227">+227 (Niger)</option>
+<option value="+228">+228 (Togo)</option>
+<option value="+229">+229 (Benin)</option>
+<option value="+230">+230 (Mauritius)</option>
+<option value="+231">+231 (Liberia)</option>
+<option value="+232">+232 (Sierra Leone)</option>
+<option value="+233">+233 (Ghana)</option>
+<option value="+234">+234 (Nigeria)</option>
+<option value="+235">+235 (Chad)</option>
+<option value="+236">+236 (Central African Republic)</option>
+<option value="+237">+237 (Cameroon)</option>
+<option value="+238">+238 (Cape Verde)</option>
+<option value="+239">+239 (São Tomé and Príncipe)</option>
+<option value="+240">+240 (Equatorial Guinea)</option>
+<option value="+241">+241 (Gabon)</option>
+<option value="+242">+242 (Congo)</option>
+<option value="+243">+243 (DR Congo)</option>
+<option value="+244">+244 (Angola)</option>
+<option value="+245">+245 (Guinea-Bissau)</option>
+<option value="+246">+246 (Diego Garcia)</option>
+<option value="+248">+248 (Seychelles)</option>
+<option value="+249">+249 (Sudan)</option>
+<option value="+250">+250 (Rwanda)</option>
+<option value="+251">+251 (Ethiopia)</option>
+<option value="+252">+252 (Somalia)</option>
+<option value="+253">+253 (Djibouti)</option>
+<option value="+254">+254 (Kenya)</option>
+<option value="+255">+255 (Tanzania)</option>
+<option value="+256">+256 (Uganda)</option>
+<option value="+257">+257 (Burundi)</option>
+<option value="+258">+258 (Mozambique)</option>
+<option value="+260">+260 (Zambia)</option>
+<option value="+261">+261 (Madagascar)</option>
+<option value="+263">+263 (Zimbabwe)</option>
+<option value="+264">+264 (Namibia)</option>
+<option value="+265">+265 (Malawi)</option>
+<option value="+266">+266 (Lesotho)</option>
+<option value="+267">+267 (Botswana)</option>
+<option value="+268">+268 (Eswatini)</option>
+<option value="+269">+269 (Comoros)</option>
+<option value="+290">+290 (Saint Helena)</option>
+<option value="+291">+291 (Eritrea)</option>
+<option value="+297">+297 (Aruba)</option>
+<option value="+298">+298 (Faroe Islands)</option>
+<option value="+299">+299 (Greenland)</option>
+<option value="+350">+350 (Gibraltar)</option>
+<option value="+351">+351 (Portugal)</option>
+<option value="+352">+352 (Luxembourg)</option>
+<option value="+353">+353 (Ireland)</option>
+<option value="+354">+354 (Iceland)</option>
+<option value="+355">+355 (Albania)</option>
+<option value="+356">+356 (Malta)</option>
+<option value="+357">+357 (Cyprus)</option>
+<option value="+358">+358 (Finland)</option>
+<option value="+359">+359 (Bulgaria)</option>
+<option value="+370">+370 (Lithuania)</option>
+<option value="+371">+371 (Latvia)</option>
+<option value="+372">+372 (Estonia)</option>
+<option value="+373">+373 (Moldova)</option>
+<option value="+374">+374 (Armenia)</option>
+<option value="+375">+375 (Belarus)</option>
+<option value="+376">+376 (Andorra)</option>
+<option value="+377">+377 (Monaco)</option>
+<option value="+378">+378 (San Marino)</option>
+<option value="+380">+380 (Ukraine)</option>
+<option value="+381">+381 (Serbia)</option>
+<option value="+382">+382 (Montenegro)</option>
+<option value="+383">+383 (Kosovo)</option>
+<option value="+385">+385 (Croatia)</option>
+<option value="+386">+386 (Slovenia)</option>
+<option value="+387">+387 (Bosnia and Herzegovina)</option>
+<option value="+389">+389 (North Macedonia)</option>
+<option value="+420">+420 (Czech Republic)</option>
+<option value="+421">+421 (Slovakia)</option>
+<option value="+423">+423 (Liechtenstein)</option>
+
+          </select>
+          <input type="tel" name="phoneNumber" placeholder="Phone Number" style="flex: 0.7;" required />
+        </div>
+        <input type="email" placeholder="Email ID" name="email" required />
+        <textarea rows="5" placeholder="Your Message" name="message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="formMessage"></div>
+    </div>
+
+    <div class="contact-info">
+      <div class="info-box">
+        <h3>Contact Info</h3>
+        <p><strong>Phone:</strong> +91-87796 76232</p>
+        <p><strong>Email:</strong> admin@internationalimmigration.com</p>
+        <p><strong>Timing:</strong> Mon - Fri, 10 AM to 6 PM</p>
+        <p><strong>Address:</strong> Phase 1, Office No.16, Rutu Riverside Estate, near KM Agrawal College, opposite Vedant Kalyan Hos
+         pital, Kolivali, Khadakpada, Kalyan, Maharashtra 421301</p>
+        
+        
+        <div class="social-icons">
+          <div class="tooltip-container">
+            <div class="tooltip">
+              <div class="profile">
+                <div class="user">
+                  <div class="img"><img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png"></div>
+                  <div class="details">
+                    <div class="name">Instagram</div>
+                    <div class="username">@International Immigration</div>
+                  </div>
+                </div>
+                <div class="about">800+ Followers</div>
+              </div>
+            </div>
+            <div class="text">
+              <a class="icon" href="https://www.instagram.com/international_immigration._/">
+                <div class="layer">
+                  <span></span><span></span><span></span><span></span>
+                  <span class="instagramSVG">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg>
+                  </span>
+                </div>
+                <div class="text">Instagram</div>
+              </a>
+            </div>
+          </div>
+
+          
+          <div class="tooltip-container">
+            <div class="tooltip">
+              <div class="profile">
+                <div class="user">
+                  <div class="img"><img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png"></div>
+                  <div class="details">
+                    <div class="name">Facebook</div>
+                    <div class="username">@International Immigration</div>
+                  </div>
+                </div>
+                <div class="about">14+ Likes</div>
+              </div>
+            </div>
+            <div class="text">
+              <a class="icon" href="https://www.facebook.com/profile.php?id=61550893840254&mibextid=ZbWKwL">
+                <div class="layer">
+                  <span></span><span></span><span></span><span></span>
+                  <span class="facebookSVG">
+                   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+<path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path><path fill="#fff" d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"></path>
+</svg>
+                  </span>
+                </div>
+                <div class="text">Facebook</div>
+              </a>
+            </div>
+          </div>
+
+          
+          <div class="tooltip-container">
+            <div class="tooltip">
+              <div class="profile">
+                <div class="user">
+                  <div class="img"><img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png"></div>
+                  <div class="details">
+                    <div class="name">LinkedIn</div>
+                    <div class="username"></div>
+                  </div>
+                </div>
+                <div class="about">Let's connect!</div>
+              </div>
+            </div>
+            <div class="text">
+              <a class="icon" href="https://www.linkedin.com/company/internationalimmigration/">
+                <div class="layer">
+                  <span></span><span></span><span></span><span></span>
+                  <span class="linkedinSVG">
+                    <svg fill="white" viewBox="0 0 448 512" height="1.5em" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M100.28 448H7.4V149.5h92.88zM53.79 108.1C24.09 108.1 0 83.81 0 54.3 0 24.5 24.09 0 53.79 0 83.18 0 107.6 24.3 107.6 54.3c-.01 29.51-24.43 53.8-53.81 53.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.32-79.3-48.4 0-55.8 37.8-55.8 76.8V448h-92.68V149.5h88.98v40.8h1.3c12.4-23.6 42.6-48.3 87.7-48.3 93.8 0 111.1 61.8 111.1 142.3V448z"/>
+                    </svg>
+                  </span>
+                </div>
+                <div class="text">LinkedIn</div>
+              </a>
+            </div>
+          </div>
+
+          
+          
+        </div>
+      </div>
+
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.3922812630585!2d73.13177677466972!3d19.265299746003578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be797482e7dde3d%3A0xc205313878748ba1!2sStudy%20Abroad%20-%20INTERNATIONAL%20IMMIGRATION!5e0!3m2!1sen!2sin!4v1752523378866!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =================  footer ==================   -->
+   <!-- Footer Starts -->
+  <footer class="footer">
+    <div class="footer-main">
+      <!-- Left Column -->
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="Logo" />
+        </div>
+        <p>
+          Master German with live online training. Certified trainers, flexible
+          timings, and comprehensive study materials to help you achieve your
+          German language goals.
+        </p>
+        <div class="footer-socials-heading">Follow us</div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61550893840254&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/international_immigration._/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/internationalimmigration/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Column -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#Cources">Courses</a></li>
+          <li><a href="#Teachers">Teachers</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> admin@internationalimmigration.com</p>
+        <p><i class="fas fa-phone-alt"></i> +91 877 967 6232</p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© 2025 International Immigration. All rights reserved.</p>
+    </div>
+  </footer>
+
+<!-- WhatsApp Floating Help Button -->
+  <a
+    href="https://api.whatsapp.com/send?phone=918779676232"
+    class="whatsapp-container"
+    target="_blank"
+  >
+    <i class="fab fa-whatsapp"></i>
+    Need Help?
+  </a>
+  
+  <!--form modal for book now section-->
+  <!-- Modal Form -->
+<div class="german-modal" id="german-modal">
+  <div class="german-modal-content">
+    <span class="german-close-btn" id="german-close-btn">&times;</span>
+    <h2>Book Your Course</h2>
+    <form id="german-form">
+      <label for="german-course">Course</label>
+      <input type="text" id="german-course" name="course" readonly />
+
+      <label for="german-name">Name</label>
+      <input type="text" id="german-name" name="name" required />
+
+      <label for="german-email">Email</label>
+      <input type="email" id="german-email" name="email" required />
+
+      <label for="german-phone">Phone Number</label>
+      <input type="tel" id="german-phone" name="phone" required />
+
+      <button type="submit" class="german-submit-btn">Submit</button>
+    </form>
+    <div id="formMessage"></div>
+  </div>
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="/frontend/js/mainG.js"></script>
+<script>
+   //backend url to be updated
+        const BACKEND_URL = "https://your-backend.onrender.com";
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form action (no page refresh)
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()); // Convert to object
+
+    try {
+      const res = await fetch(`${BACKEND_URL}/send-contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        form.reset(); // optional: clears the form
+      } else {
+        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+      }
+    } catch (err) {
+      console.error('Error:', err);
+      document.getElementById('formMessage').innerHTML = `<p style="color: red;">Something went wrong!</p>`;
+    }
+  });
+</script>
+<script>
+  document.getElementById('enquiryForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form action (no page refresh)
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()); // Convert to object
+
+    try {
+      const res = await fetch(`${BACKEND_URL}/send-contactUs`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        form.reset(); // optional: clears the form
+      } else {
+        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+      }
+    } catch (err) {
+      console.error('Error:', err);
+      document.getElementById('formMessage').innerHTML = `<p style="color: red;">Something went wrong!</p>`;
+    }
+  });
+</script>
+<!--Update form submit handler--> 
+<script>
+document.getElementById("german-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const course = document.getElementById("german-course").value;
+  const name = document.getElementById("german-name").value;
+  const email = document.getElementById("german-email").value;
+  const phone = document.getElementById("german-phone").value;
+
+  try {
+    const response = await fetch(`${BACKEND_URL}/send-german-form`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ course, name, email, phone }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        form.reset(); 
+      document.getElementById("german-modal").style.display = "none";
+    } else {
+        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    document.getElementById('formMessage').innerHTML = `<p style="color: red;">Something went wrong!</p>`;
+  }
+});
+</script>
+
+</html>

@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Immigration | About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-light: #4895ef;
+            --secondary: #3f37c9;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --neutral: #e2e2e2;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: #fffcea;
+            overflow-x: hidden;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Glass morphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            position: relative;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            flex: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            font-family: golos text;
+            color: #053f6a;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #3c3b36;
+            margin-bottom: 40px;
+            max-width: 600px;
+            font-family: golos text;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image .image-wrapper {
+            border-radius: 16px;
+            overflow: hidden;
+            
+        }
+
+        .hero-image img {
+            width: 90%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        .about{
+          background: #053f6a;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            font-family: golos text;
+            color: #fff;
+        }
+        .why{
+          color: #053f6a;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #ffffff;
+            border-radius: 2px;
+        }
+        .why::after{
+          background-color: #053f6a;
+        }
+        .our::after{
+          background-color: #053f6a;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            opacity: 0.9;
+            font-family: golos text;
+            color: #fff;
+        }
+
+        /* Mission Section */
+        .mission {
+            background: transparent;
+        }
+        .mission .section-title{
+            color: #053f6a;
+        }
+
+        .mission-container {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .mission-text {
+            flex: 1;
+            font-family: golos text;
+            color: rgb(0, 0, 0);
+        }
+
+        .mission-text ul {
+            margin: 25px 0 25px 20px;
+            font-family: golos text;
+        }
+
+        .mission-text li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+            font-size: 1.1rem;
+            list-style: none;
+        }
+
+        .mission-text li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #000000;
+        }
+
+        /* Why Choose Us - Updated Grid Layout */
+        .why-us {
+            background: transparent;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .why-us .section-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Strict 3 columns */
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        /* Tablet: 3 columns (same as desktop) */
+        @media (max-width: 1024px) {
+            .stats-grid {
+                gap: 20px; /* Slightly reduce gap */
+            }
+        }
+
+        /* Mobile: 2 columns */
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Small mobile: 1 column */
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .stat-card {
+            padding: 40px 25px;
+            background: #f0d321;
+            border-radius: 16px;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:#053f6a;
+            opacity: 0;
+            z-index: -1;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(67, 97, 238, 0.15);
+            color: white;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-card:hover .stat-icon,
+        .stat-card:hover .stat-number,
+        .stat-card:hover .stat-title,
+        .stat-card:hover .stat-desc {
+            color: white;
+        }
+
+        .stat-icon {
+            font-size: 2.8rem;
+            color: #053f6a;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #053f6a;
+            margin-bottom: 5px;
+            transition: var(--transition);
+            font-family: 'Nunito';
+        }
+
+        .stat-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            transition: var(--transition);
+            font-family: golos text;
+            color: #053f6a;
+        }
+
+        .stat-desc {
+            font-size: 0.95rem;
+            color: #666;
+            transition: var(--transition);
+            font-family: golos text;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container, .mission-container {
+                flex-direction: column;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 120px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 0;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .stat-card {
+                padding: 30px 20px;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+            }
+        }
+        .about-button{
+            background-color: #f0d321;
+            color: #053f6a;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            font-family: 'Golos Text';
+        }
+        .about-button:hover{
+            background-color: #053f6a;
+            color: #fff;
+            
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(7, 48, 80, 0.15);
+        }
+        /* NAVBAR)))))))))))))))))))))) */
+ .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: transparent;
+      backdrop-filter: blur(1px);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0px;
+      padding-left: 70px;
+    }
+
+    .logo {
+      font-size: 24px;
+    }
+    .logo img {
+      max-height: 60px;
+      height: auto;
+      width: auto;
+      padding: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-family: fredoka;
+      align-items: center;
+      font-weight: 400;
+      padding-right: 70px;
+    }
+
+    .nav-links a,
+    .selected {
+      position: relative;
+      text-decoration: none;
+      color: #053f6a;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover,
+    .selected:hover {
+      background-color: #f0d321;
+      color: #053f6a;
+    }
+
+    .dropdown {
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fffcea;
+      border-radius: 4px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      min-width: 120px;
+      z-index: 99;
+    }
+
+    .options a {
+      padding: 10px 12px;
+      text-decoration: none;
+      color: #053f6a;
+      white-space: nowrap;
+    }
+
+    .options a:hover {
+      background-color: #f0d321;
+      color: #053f6a;
+    }
+
+    .dropdown:hover .options {
+      display: flex;
+    }
+
+    /* Hamburger menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 1100;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #053f6a;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    /* Hamburger animation to cross */
+    #menu-toggle:checked + .hamburger span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Hide checkbox */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #fffcea;
+        backdrop-filter: blur(8px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        border-radius: 8px;
+        display: none;
+        width: 200px;
+        gap: 10px;
+      }
+      .logo img
+      {
+        padding: 6px;
+      }
+
+      #menu-toggle:checked ~ .nav-links {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+        padding-right: 20px;
+      }
+
+      .dropdown .options {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 15px;
+      }
+
+      .dropdown.active .options {
+        display: flex;
+      }
+
+      .nav-container {
+        padding-left: 26px;
+        padding-right: 23px;
+      }
+    }
+    @media (max-width:500px){
+      .logo img{
+        padding: 12px;
+      }
+    }
+     /*$$$$$$$$$$$$44   WHATSAPP FLOATING $$$$$$$$$$$$$$$$$*/
+        .whatsapp-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      background-color: #25d366;
+      border-radius: 30px;
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      z-index: 1000;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-container:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp-container i {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    /*============ foooter ====================*/
+    footer {
+      background: #fff7c7;
+      color: #ccc;
+      padding: 40px 20px 20px;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .footer-main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-left {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo img {
+      width: 25%;
+      height: auto;
+    }
+
+    .footer-logo h2 {
+      font-size: 1.2rem;
+      color: white;
+      font-family: outfit;
+    }
+
+    .footer-left p {
+      margin: 15px 0;
+      max-width: 350px;
+      line-height: 1.2;
+      color: #053f6a;
+      font-size: 13px;
+    }
+
+    .footer-socials-heading {
+      margin-top: 15px;
+      color: #f0d321;
+      font-weight: bold;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-socials a {
+      background: #053f6a;
+      color: #fff;
+      font-size: 14px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .footer-socials a:hover {
+      background-color: #f0d321;
+      color: #053f6a;
+    }
+
+    .footer-links,
+    .footer-contact {
+      min-width: 180px;
+    }
+
+    .footer-links h3,
+    .footer-contact h3 {
+      color: #f0d321;
+      margin-bottom: 10px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links ul li a {
+      text-decoration: none;
+      color: #053f6a;
+      transition: color 0.2s;
+    }
+
+    .footer-links ul li a:hover {
+      color: #f0d321;
+    }
+
+    .footer-contact p {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #053f6a;
+    }
+
+    .footer-contact i {
+      color: #053f6a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #053f6a;
+      margin-top: 30px;
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .footer-bottom p {
+      font-size: 14px;
+      color: #053f6a;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .footer-main {
+        flex-direction: column;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-logo img {
+      width: 50%;
+      height: auto;
+    }
+    }
+
+
+    </style>
+</head>
+<body>
+    <!--   NAV BAR++++++ -->
+         <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="LOGO"></div>
+
+            <input type="checkbox" id="menu-toggle" />
+            <label class="hamburger" for="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="nav-links">
+                <a href="/frontend/index.html">Home</a>
+                <a href="/frontend/about.html">About</a>
+                <a href="#visa-services-wrapper">Services</a>
+
+                <div class="dropdown">
+                    <div class="selected">Languages
+                        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="options">
+                        <a href="/frontend/german.html">German</a>
+                        <a href="/frontend/french.html">French</a>
+                        <a href="/frontend/ielts.html">IELTS</a>
+            <a href="/frontend/toefl.html">Toefl</a>
+                    </div>
+                </div>
+
+                <a href="/frontend/contact.html">Contact</a>
+                <a href="/frontend/blogs.html">Blogs</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1>Welcome to International Immigration</h1>
+                <p>Your premier destination for comprehensive Educational Consulting Services. We empower ambitious students worldwide with the knowledge and guidance they need to excel in their pursuit of higher education.</p>
+                <a href="/frontend/contact.html" class="about-button" ><i class="fa-solid fa-phone" style="margin-right: 8px;"></i>contact us</a>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="/frontend/assets/assets/Founder-profile-aboutus.png"Global education">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p>At International Immigration, we have a bold vision: to become the world's leading B2C STUDY ABROAD ASSISTANCE & IMMIGRATION COMPANY. With a focus on key destinations such as the US, UK, Canada, Australia, Germany, and more, we specialize in helping individuals realize their dreams of studying, working, or investing abroad.</p>
+            <p>Since our establishment in 2022, we have been committed to providing seamless experiences for students embarking on their journey to Study Abroad. From expert counseling to personalized application assistance, our goal is to simplify the complexities of the admissions process and empower you to achieve your academic aspirations.</p>
+            <p>Our services extend across major study destinations, including the US, UK, Ireland, Canada, Europe, Dubai, New Zealand, and Australia. With International Immigration, you can trust that you're in capable hands as you navigate the path to International Education Success.</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container mission-container">
+            <div class="mission-text">
+                <h2 class="section-title our">Our Mission</h2>
+                <p>As a service-driven organization, we are committed to facilitating opportunities for deserving candidates while upholding the highest standards of accuracy and integrity. With a team of extensive expertise in Technical studies, Career guidance, and Immigration, we are dedicated to delivering unmatched support to our clients.</p>
+                <p>Whether you're seeking assistance for:</p>
+                <ul>
+                    <li>Study Abroad Plans</li>
+                    <li>Overseas Job Placements</li>
+                    <li>English Language Proficiency tests (IELTS, PTE, TOEFL, SAT, DUOLINGO)</li>
+                    <li>Test preparation (GMAT, GRE, German Language)</li>
+                </ul>
+                <p>Our seasoned professionals are here to guide you every step of the way.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title why">Why Choose Us?</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <div class="stat-number" data-count="100">0+</div>
+                    <div class="stat-title">Happy Clients</div>
+                    <div class="stat-desc">Students successfully placed abroad</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-number" data-count="97">0%</div>
+                    <div class="stat-title">Success Rate</div>
+                    <div class="stat-desc">Visa application success</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="stat-number" data-count="10">0+</div>
+                    <div class="stat-title">Certified Experts</div>
+                    <div class="stat-desc">Professional consultants</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="stat-number" data-count="30">0+</div>
+                    <div class="stat-title">Countries</div>
+                    <div class="stat-desc">Global destinations covered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="stat-number" data-count="700">0+</div>
+                    <div class="stat-title">Institutions</div>
+                    <div class="stat-desc">Partner universities worldwide</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-number" data-count="5">0+</div>
+                    <div class="stat-title">Years Experience</div>
+                    <div class="stat-desc">Combined team expertise</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Help Button -->
+  <a
+    href="https://api.whatsapp.com/send?phone=918779676232"
+    class="whatsapp-container"
+    target="_blank"
+  >
+    <i class="fab fa-whatsapp"></i>
+    Need Help?
+  </a>
+    <!-- =================  footer ==================   -->
+   <!-- Footer Starts -->
+  <footer class="footer">
+    <div class="footer-main">
+      <!-- Left Column -->
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="Logo" />
+          <!-- <h2><span style="color: #ffffff;">International</span>  <span style="color: rgb(255, 255, 255);">  Immigration</span> </h2> -->
+        </div>
+        <p>
+          Your premier destination for comprehensive Educational Consulting Services. We empower ambitious students worldwide with the knowledge and guidance they need to excel in their pursuit of higher education.
+        </p>
+        <div class="footer-socials-heading">Follow us</div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61550893840254&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/international_immigration._/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/internationalimmigration/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Column -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="index.html#visa-services-wrapper">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> admin@internationalimmigration.com</p>
+        <p><i class="fas fa-phone-alt"></i> +91 877 967 6232</p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© 2025 International Immigration. All rights reserved.</p>
+    </div>
+  </footer>
+
+    <script>
+        // NAVBAR++++++++++++
+           // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      
+      // Handle dropdowns in mobile view
+      const dropdowns = document.querySelectorAll(".dropdown");
+      
+      dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector(".selected");
+        
+        selected.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdown.classList.toggle("active");
+          }
+        });
+      });
+      
+      // Close dropdowns when clicking outside
+      document.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+          dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("active");
+            }
+          });
+          
+          // Also close the mobile menu if clicking outside
+          if (!e.target.closest(".nav-container") && menuToggle.checked) {
+            menuToggle.checked = false;
+            navLinks.style.display = "none";
+          }
+        }
+      });
+        // Enhanced counter animation with GSAP for ultra-smoothness
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Animate counters
+                        const counters = entry.target.querySelectorAll('.stat-number');
+                        counters.forEach(counter => {
+                            const target = +counter.getAttribute('data-count');
+                            const duration = 2000;
+                            const startTime = Date.now();
+                            
+                            const animate = () => {
+                                const elapsed = Date.now() - startTime;
+                                const progress = Math.min(elapsed / duration, 1);
+                                const value = Math.floor(progress * target);
+                                
+                                counter.textContent = value + (counter.getAttribute('data-count') === '98' ? '%' : '+');
+                                
+                                if (progress < 1) {
+                                    requestAnimationFrame(animate);
+                                }
+                            };
+                            
+                            requestAnimationFrame(animate);
+                        });
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            // Observe why-us section
+            const whyUsSection = document.querySelector('.why-us');
+            if (whyUsSection) {
+                observer.observe(whyUsSection);
+            }
+
+            // Add hover effect to hero image
+            const heroImage = document.querySelector('.hero-image img');
+            if (heroImage) {
+                heroImage.addEventListener('mousemove', (e) => {
+                    const { offsetX, offsetY } = e;
+                    const { offsetWidth, offsetHeight } = heroImage;
+                    const xPos = (offsetX / offsetWidth - 0.5) * 20;
+                    const yPos = (offsetY / offsetHeight - 0.5) * 20;
+                    heroImage.style.transform = `scale(1.05) rotateX(${yPos}deg) rotateY(${xPos}deg)`;
+                });
+
+                heroImage.addEventListener('mouseleave', () => {
+                    heroImage.style.transform = 'scale(1.05) rotateX(0) rotateY(0)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

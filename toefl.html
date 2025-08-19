@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toefel</title>
+    <link rel="stylesheet" href="/frontend/css/Tf_style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assetsM/cropped-cropped-cropped-INTERNATIONAL_IMMIGRATION__3_-removebg-preview.png" type="image/x-icon">
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
+</head>
+<body>
+
+<!-- &&&&&&&&&&&&&&&&&&      NAVIGATION   BAR $$$$$$$$$$$$$$$ -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="LOGO"></div>
+
+      <input type="checkbox" id="menu-toggle" />
+      <label class="hamburger" for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="nav-links">
+        <a href="/frontend/index.html">Home</a>
+        <a href="/frontend/about.html">About</a>
+        <a href="#visa-services-wrapper">Services</a>
+
+        <div class="dropdown">
+          <div class="selected">Languages
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" fill="none"/>
+            </svg>
+          </div>
+          <div class="options">
+            <a href="/frontend/german.html">German</a>
+            <a href="/frontend/french.html">French</a>
+            <a href="/frontend/ielts.html">IELTS</a>
+            <a href="/frontend/toefl.html">Toefl</a>
+          </div>
+        </div>
+
+        <a href="/frontend/contact.html">Contact</a>
+        <a href="/frontend/blogs.html">Blogs</a>
+      </div>
+    </div>
+  </nav>
+
+    <!-- HERO+++++++++++++++++ -->
+     <section class="hero">
+        <!-- Animated Background Particles -->
+        <div class="particles" id="particles"></div>
+        
+        <!-- Animated Path -->
+        <div class="path-animation">
+            <svg width="100%" height="100%" viewBox="0 0 1000 800" preserveAspectRatio="none">
+                <path class="path-line" d="M100,100 C300,50 400,200 600,150 C800,100 900,300 700,400 C500,500 300,350 200,600 C100,850 400,700 600,650" />
+            </svg>
+        </div>
+        
+        <!-- Word Bubbles -->
+        <div class="word-bubbles" id="wordBubbles"></div>
+        
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1>TOEFL Karo<br> Abroad Chalo</h1>
+                <p>Transform your English skills with our dynamic TOEFL program featuring interactive lessons, real-time feedback, and AI-powered practice tools.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#contactFormToefl" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Start Free Trial
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=918779676232" class="btn btn-secondary">
+                        <i class="fa-solid fa-user-tie"></i> Ask Expert
+                    </a>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-text">
+                            <h3>120+</h3>
+                            <p>Score Improvements</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock-rotate-left"></i>
+                        </div>
+                        <div class="stat-text">
+                            <h3>24/7</h3>
+                            <p>Expert Support</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="stat-text">
+                            <h3>AI</h3>
+                            <p>Powered personalization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lottie Animation - Positioned differently based on screen size -->
+            <div class="lottie-container" id="lottie-animation">
+                <dotlottie-wc
+                  src="https://lottie.host/c5b30d3f-e646-47ce-b157-01b4faeb6462/zLd44IG4ii.lottie"
+                  style="width: 100%; height: 100%"
+                  speed="1"
+                  autoplay
+                  loop
+                ></dotlottie-wc>
+            </div>
+        </div>
+     </section>
+
+
+     <!-- OFFER:::::::::::::::::::: -->
+
+       <section class="toefl-offer-section-wrapper">
+        <div class="offer-hed">Smarter Start to Your TOEFL Journey</div>
+       <section class="toefl-offer-section">
+         
+    <div class="float-bg" style="--tx: 200px; --ty: 150px; width: 150px; height: 150px; top: 10%; left: 5%; animation-delay: 0s;"></div>
+    <div class="float-bg" style="--tx: -180px; --ty: 120px; width: 200px; height: 200px; top: 30%; right: 10%; animation-delay: 2s;"></div>
+    <div class="float-bg" style="--tx: 150px; --ty: -100px; width: 120px; height: 120px; bottom: 20%; left: 15%; animation-delay: 4s;"></div>
+    <div class="float-bg" style="--tx: -120px; --ty: 80px; width: 180px; height: 180px; bottom: 30%; right: 20%; animation-delay: 1s;"></div>
+
+    <div class="toefl-container">
+      <div class="toefl-card">
+        <div class="toefl-badge">LIMITED OFFER</div>
+
+        <div class="toefl-info">
+          <h2 class="toefl-title">TOEFL Exam<br>Exclusive Discount</h2>
+
+          <div class="price-box">
+            <div class="price-original">Regular Price: ₹16,900 (Including GST)</div>
+            <div class="price-discounted">15,210<small>After 10% Discount</small></div>
+          </div>
+
+          <div class="savings-tag">Save ₹1,690 Today!</div>
+        </div>
+
+        <div class="toefl-details">
+          <div class="toefl-offer-box">
+            <h3 class="offer-heading"><i class="fas fa-gift"></i> Special Offer</h3>
+            <p class="offer-description">
+              We're offering an exclusive 10% discount on TOEFL exam fees for a limited time. 
+              Message us now to receive your personal discount code and save ₹1,690 on your 
+              registration. This offer won't last forever!
+            </p>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=918779676232" class="btn-discount"><i class="fas fa-paper-plane"></i> Get Your Discount Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </section>
+
+
+  <!--    TEST STRUCTURE________________________________ -->
+         <div class="TFL-stru-wrapper">
+        <div class="TFL-stru-container">
+            <h1 class="TFL-stru-heading">TOEFL ibt Test Structure</h1>
+            
+            <div class="TFL-stru-table-card">
+                <div class="TFL-stru-table-header">
+                    <h2><i class="fas fa-atom"></i> Test Sections Overview</h2>
+                </div>
+                
+                <div class="TFL-stru-table-wrapper">
+                    <table class="TFL-stru-table">
+                        <thead>
+                            <tr>
+                                <th>Section</th>
+                                <th>Description</th>
+                                <th>Timing</th>
+                                <th>Tasks</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="TFL-stru-section-cell">
+                                        <div class="TFL-stru-section-icon">
+                                            <i class="fas fa-book-open"></i>
+                                        </div>
+                                        <div class="TFL-stru-section-info">
+                                            <span class="TFL-stru-section-name">Reading</span>
+                                            <span class="TFL-stru-section-desc">Academic reading comprehension</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Read passages and respond to questions</td>
+                                <td class="TFL-stru-timing-cell">
+                                    <i class="far fa-clock"></i> 35 min.
+                                </td>
+                                <td class="TFL-stru-questions-cell">20 questions</td>
+                                <td class="TFL-stru-score-cell">0-30</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="TFL-stru-section-cell">
+                                        <div class="TFL-stru-section-icon">
+                                            <i class="fas fa-headphones"></i>
+                                        </div>
+                                        <div class="TFL-stru-section-info">
+                                            <span class="TFL-stru-section-name">Listening</span>
+                                            <span class="TFL-stru-section-desc">Academic lectures & discussions</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Answer questions about brief lectures or classroom discussions</td>
+                                <td class="TFL-stru-timing-cell">
+                                    <i class="far fa-clock"></i> 36 min.
+                                </td>
+                                <td class="TFL-stru-questions-cell">28 questions</td>
+                                <td class="TFL-stru-score-cell">0-30</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="TFL-stru-section-cell">
+                                        <div class="TFL-stru-section-icon">
+                                            <i class="fas fa-comment-dots"></i>
+                                        </div>
+                                        <div class="TFL-stru-section-info">
+                                            <span class="TFL-stru-section-name">Speaking</span>
+                                            <span class="TFL-stru-section-desc">Express ideas verbally</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Talk about a familiar topic and discuss material you read and heard</td>
+                                <td class="TFL-stru-timing-cell">
+                                    <i class="far fa-clock"></i> 16 min.
+                                </td>
+                                <td class="TFL-stru-questions-cell">4 tasks</td>
+                                <td class="TFL-stru-score-cell">0-30</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="TFL-stru-section-cell">
+                                        <div class="TFL-stru-section-icon">
+                                            <i class="fas fa-keyboard"></i>
+                                        </div>
+                                        <div class="TFL-stru-section-info">
+                                            <span class="TFL-stru-section-name">Writing</span>
+                                            <span class="TFL-stru-section-desc">Academic writing tasks</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Read a passage, listen to a recording and type your response</td>
+                                <td class="TFL-stru-timing-cell">
+                                    <i class="far fa-clock"></i> 29 min.
+                                </td>
+                                <td class="TFL-stru-questions-cell">2 tasks</td>
+                                <td class="TFL-stru-score-cell">0-30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Mobile Cards -->
+                <div class="TFL-stru-mobile-card">
+                    <div class="TFL-stru-mobile-header">
+                        <div class="TFL-stru-mobile-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="TFL-stru-mobile-title">Reading</div>
+                    </div>
+                    <p class="TFL-stru-mobile-desc">Read passages and respond to questions</p>
+                    <div class="TFL-stru-mobile-details">
+                        <div class="TFL-stru-detail-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Timing</div>
+                                <div class="TFL-stru-detail-value">35 min.</div>
+                            </div>
+                        </div>
+                        <div class="TFL-stru-detail-item">
+                            <i class="far fa-question-circle"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Questions</div>
+                                <div class="TFL-stru-detail-value">20</div>
+                            </div>
+                        </div>
+                        <div class="TFL-stru-detail-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Score Range</div>
+                                <div class="TFL-stru-detail-value">0-30</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="TFL-stru-mobile-card">
+                    <div class="TFL-stru-mobile-header">
+                        <div class="TFL-stru-mobile-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="TFL-stru-mobile-title">Listening</div>
+                    </div>
+                    <p class="TFL-stru-mobile-desc">Answer questions about brief lectures or classroom discussions</p>
+                    <div class="TFL-stru-mobile-details">
+                        <div class="TFL-stru-detail-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Timing</div>
+                                <div class="TFL-stru-detail-value">36 min.</div>
+                            </div>
+                        </div>
+                        <div class="TFL-stru-detail-item">
+                            <i class="far fa-question-circle"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Questions</div>
+                                <div class="TFL-stru-detail-value">28</div>
+                            </div>
+                        </div>
+                        <div class="TFL-stru-detail-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Score Range</div>
+                                <div class="TFL-stru-detail-value">0-30</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="TFL-stru-mobile-card">
+                    <div class="TFL-stru-mobile-header">
+                        <div class="TFL-stru-mobile-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <div class="TFL-stru-mobile-title">Speaking</div>
+                    </div>
+                    <p class="TFL-stru-mobile-desc">Talk about a familiar topic and discuss material you read and heard</p>
+                    <div class="TFL-stru-mobile-details">
+                        <div class="TFL-stru-detail-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Timing</div>
+                                <div class="TFL-stru-detail-value">16 min.</div>
+                            </div>
+                        </div>
+                        <div class="TFL-stru-detail-item">
+                            <i class="far fa-question-circle"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Tasks</div>
+                                <div class="TFL-stru-detail-value">4</div>
+                            </div>
+                        </div>
+                        <div class="TFL-stru-detail-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Score Range</div>
+                                <div class="TFL-stru-detail-value">0-30</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="TFL-stru-mobile-card">
+                    <div class="TFL-stru-mobile-header">
+                        <div class="TFL-stru-mobile-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <div class="TFL-stru-mobile-title">Writing</div>
+                    </div>
+                    <p class="TFL-stru-mobile-desc">Read a passage, listen to a recording and type your response</p>
+                    <div class="TFL-stru-mobile-details">
+                        <div class="TFL-stru-detail-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Timing</div>
+                                <div class="TFL-stru-detail-value">29 min.</div>
+                            </div>
+                        </div>
+                        <div class="TFL-stru-detail-item">
+                            <i class="far fa-question-circle"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Tasks</div>
+                                <div class="TFL-stru-detail-value">2</div>
+                            </div>
+                        </div>
+                        <div class="TFL-stru-detail-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <div class="TFL-stru-detail-label">Score Range</div>
+                                <div class="TFL-stru-detail-value">0-30</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--  COURCES??????????????????????? -->
+  <div class="Cource-Type-wrapper">
+<div class="Cource-Type-container">
+<header class="Cource-Type-header">
+<h1 class="Cource-Type-title">TOEFL Premium Courses</h1>
+<p class="Cource-Type-subtitle">Choose the perfect preparation program for your needs</p>
+</header>
+<div class="Cource-Type-cards-wrapper">
+
+<!-- Personal Coaching -->
+<article class="Cource-Type-card" id="courses">
+<div class="Cource-Type-card-content">
+<div class="Cource-Type-card-main">
+<div class="Cource-Type-card-header">
+<div class="Cource-Type-icon"><i class="fas fa-user-graduate"></i></div>
+<div class="Cource-Type-titles">
+<h3>Personal Coaching</h3>
+<p>1-on-1 tailored instruction</p>
+</div>
+</div>
+<div class="Cource-Type-price-section">
+<div class="Cource-Type-price">
+<span class="Cource-Type-currency">₹</span>
+<span class="Cource-Type-amount">9,999</span>
+</div>
+<p class="Cource-Type-price-note">One-time payment</p>
+</div>
+</div>
+<div class="Cource-Type-card-details">
+<ul class="Cource-Type-features">
+<li>40 hours personalized training</li>
+<li>Custom study plan</li>
+<li>Flexible scheduling</li>
+<li>Daily practice tests</li>
+</ul>
+<button class="Cource-Type-btn" onclick="window.location.href='https://api.whatsapp.com/send?phone=918779676232'"><i class="fa-solid fa-rocket"></i></i><a href="https://api.whatsapp.com/send?phone=918779676232" style="color: white; text-decoration: none;"> Get Started</a></button>
+</div>
+</div>
+</article>
+
+<!-- Group Class -->
+<article class="Cource-Type-card">
+<div class="Cource-Type-ribbon">Popular</div>
+<div class="Cource-Type-card-content">
+<div class="Cource-Type-card-main">
+<div class="Cource-Type-card-header">
+<div class="Cource-Type-icon"><i class="fas fa-users"></i></div>
+<div class="Cource-Type-titles">
+<h3>Group Masterclass</h3>
+<p>Interactive peer learning</p>
+</div>
+</div>
+<div class="Cource-Type-price-section">
+<div class="Cource-Type-price">
+<span class="Cource-Type-currency">₹</span>
+<span class="Cource-Type-amount">4,999</span>
+</div>
+<p class="Cource-Type-price-note">One-time payment</p>
+</div>
+</div>
+<div class="Cource-Type-card-details">
+<ul class="Cource-Type-features">
+<li>60 hours live training</li>
+<li>Small groups (max 6)</li>
+<li>Weekly mock tests</li>
+<li>Study materials included</li>
+</ul>
+<button class="Cource-Type-btn" onclick="window.location.href='https://api.whatsapp.com/send?phone=918779676232'"><i class="fa-solid fa-rocket"></i></i> <a href="https://api.whatsapp.com/send?phone=918779676232" style="color: white; text-decoration: none;"> Get Started</a></button>
+</div>
+</div>
+</article>
+
+</div>
+</div>
+</div>
+
+
+
+<!--    ADVANTAGES?????????????????????????????????????/ -->
+    <Section class="adv-wrapper" >
+      <div class="adv-container">
+        <header class="adv-header">
+            <h1 class="adv-main-title">TOEFL iBT Advantages</h1>
+            <p class="adv-subtitle">Discover why TOEFL iBT is the most accepted English-language assessment worldwide with these key benefits</p>
+        </header>
+
+        <div class="adv-grid">
+            <!-- Card 1 (Left) -->
+            <div class="adv-card">
+                <div class="adv-card-number">01</div>
+                <div class="adv-card-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="adv-card-title">100% Academic Focus</h3>
+                <div class="adv-card-content">
+                    <p>TOEFL iBT features 100% academically focused content that combines reading, listening, speaking and writing skills just as students experience in university classrooms.</p>
+                </div>
+                <div class="adv-card-footer">
+                    <a href="#bestEng" class="adv-learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 2 (Right) -->
+            <div class="adv-card">
+                <div class="adv-card-number">02</div>
+                <div class="adv-card-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3 class="adv-card-title">Globally Accepted</h3>
+                <div class="adv-card-content">
+                    <p>Accepted by over 13,000 institutions in 160+ countries, including 100% of universities in the US, Canada, UK and Australia. 9 out of 10 US universities prefer TOEFL iBT.</p>
+                </div>
+                <div class="adv-card-footer">
+                    <a href="#bestEng" class="adv-learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 3 (Left) -->
+            <div class="adv-card">
+                <div class="adv-card-number">03</div>
+                <div class="adv-card-icon">
+                    <i class="fas fa-stopwatch"></i>
+                </div>
+                <h3 class="adv-card-title">Under 2 Hours</h3>
+                <div class="adv-card-content">
+                    <p>The shortest of major English tests, TOEFL iBT takes less than 2 hours to complete, saving valuable time for test takers.</p>
+                </div>
+                <div class="adv-card-footer">
+                    <a href="#bestEng" class="adv-learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 4 (Right) -->
+            <div class="adv-card">
+                <div class="adv-card-number">04</div>
+                <div class="adv-card-icon">
+                    <i class="fas fa-laptop-house"></i>
+                </div>
+                <h3 class="adv-card-title">Test Your Way</h3>
+                <div class="adv-card-content">
+                    <p>Flexible testing options allow students to take TOEFL iBT at a test center or at home, whichever is more convenient.</p>
+                </div>
+                <div class="adv-card-footer">
+                    <a href="#bestEng" class="adv-learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 5 (Left) -->
+            <div class="adv-card">
+                <div class="adv-card-number">05</div>
+                <div class="adv-card-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="adv-card-title">Best-in-Class Security</h3>
+                <div class="adv-card-content">
+                    <p>State-of-the-art security features including biometric voice ID, facial recognition, AI monitoring and trained proctors ensure test integrity.</p>
+                </div>
+                <div class="adv-card-footer">
+                    <a href="#bestEng" class="adv-learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 6 (Right) -->
+            <div class="adv-card">
+                <div class="adv-card-number">06</div>
+                <div class="adv-card-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="adv-card-title">Precise Scoring</h3>
+                <div class="adv-card-content">
+                    <p>TOEFL iBT's 0-120 point scale provides more precise measurement than band-based scoring systems.</p>
+                </div>
+                <div class="adv-card-footer">
+                    <a href="#bestEng" class="adv-learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 7 (Left) -->
+            <div class="adv-card">
+                <div class="adv-card-number">07</div>
+                <div class="adv-card-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3 class="adv-card-title">Fair & Unbiased</h3>
+                <div class="adv-card-content">
+                    <p>Combination of AI and anonymous human raters ensures maximum fairness in scoring speaking and writing responses.</p>
+                </div>
+                <div class="adv-card-footer">
+                    <a href="#bestEng" class="adv-learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 8 (Right) -->
+            <div class="adv-card">
+                <div class="adv-card-number">08</div>
+                <div class="adv-card-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="adv-card-title">Fast Results</h3>
+                <div class="adv-card-content">
+                    <p>Get unofficial Reading/Listening scores immediately after the test, with official scores reported in just 4-8 days.</p>
+                </div>
+                <div class="adv-card-footer">
+                    <a href="#bestEng" class="adv-learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 9 (Left) -->
+            <div class="adv-card">
+                <div class="adv-card-number">09</div>
+                <div class="adv-card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3 class="adv-card-title">Get Noticed</h3>
+                <div class="adv-card-content">
+                    <p>90% of TOEFL takers gain admission to their first- or second-choice university, standing out in applications.</p>
+                </div>
+                <div class="adv-card-footer">
+                    <a href="#" class="adv-learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 10 (Right) -->
+            <div class="adv-card">
+                <div class="adv-card-number">10</div>
+                <div class="adv-card-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 class="adv-card-title">Better Prepared</h3>
+                <div class="adv-card-content">
+                    <p>TOEFL preparation directly contributes to academic skills that help students succeed in university classrooms.</p>
+                </div>
+                <div class="adv-card-footer">
+                    <a href="#" class="adv-learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <button class="adv-show-more" id="advShowMore">
+            Show More Advantages <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+    </Section>
+
+
+<!--  ENGLISH TEST COMPARISON TABLE&&&&&&&&&&&&&&&&&&&&&&&& -->
+    <div class="eng-test-wrapper" id="bestEng">
+      <div class="englist-test-hed"> Which English Test Is Best For You?</div>
+        <div class="eng-test-comparison-container">
+            <div class="eng-test-header">
+                <h1>Let's Compare and Find Out</h1>
+                <p>Compare TOEFL iBT, IELTS Academic, and PTE Academic</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="eng-test-filter-tabs">
+                <button class="eng-test-tab eng-test-tab-active" data-filter="all">All Tests</button>
+                <button class="eng-test-tab" data-filter="toefl">TOEFL iBT</button>
+                <button class="eng-test-tab" data-filter="ielts">IELTS</button>
+                <button class="eng-test-tab" data-filter="pte">PTE Academic</button>
+            </div>
+
+            <!-- Comparison Table -->
+            <table class="eng-test-comparison-table">
+                <thead>
+                    <tr>
+                        <th class="eng-test-feature-name">Feature</th>
+                        <th class="eng-test-toefl-heading">TOEFL iBT</th>
+                        <th class="eng-test-ielts-heading">IELTS Academic</th>
+                        <th class="eng-test-pte-heading">PTE Academic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="eng-test-feature-row eng-test-fade-in">
+                        <td class="eng-test-feature-name">Test Format</td>
+                        <td class="eng-test-test-value eng-test-toefl-col" data-label="TOEFL iBT">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">Internet-based</div>
+                                <div class="eng-test-details">4 sections: Reading, Listening, Speaking, Writing</div>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-ielts-col" data-label="IELTS Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">Paper/Computer</div>
+                                <div class="eng-test-details">4 sections: Reading, Listening, Speaking, Writing</div>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-pte-col" data-label="PTE Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">Computer-based</div>
+                                <div class="eng-test-details">3 combined sections</div>
+                                <span class="eng-test-tag eng-test-pte-tag">Integrated Format</span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="eng-test-feature-row eng-test-fade-in">
+                        <td class="eng-test-feature-name">Test Duration</td>
+                        <td class="eng-test-test-value eng-test-toefl-col" data-label="TOEFL iBT">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">1 hour 56 minutes</div>
+                                <div class="eng-test-details">Shortened version available</div>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-ielts-col" data-label="IELTS Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">2 hours 45 minutes</div>
+                                <div class="eng-test-details">Speaking test scheduled separately</div>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-pte-col eng-test-highlight" data-label="PTE Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">2 hours</div>
+                                <div class="eng-test-details">Single continuous session</div>
+                                <span class="eng-test-best-badge">Fastest</span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="eng-test-feature-row eng-test-fade-in">
+                        <td class="eng-test-feature-name">Scoring System</td>
+                        <td class="eng-test-test-value eng-test-toefl-col" data-label="TOEFL iBT">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">0-120 points</div>
+                                <div class="eng-test-details">30 points per section</div>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-ielts-col" data-label="IELTS Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">0-9 bands</div>
+                                <div class="eng-test-details">0.5 band increments</div>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-pte-col" data-label="PTE Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">10-90 scale</div>
+                                <div class="eng-test-details">Automated scoring</div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="eng-test-feature-row eng-test-fade-in">
+                        <td class="eng-test-feature-name">Speaking Evaluation</td>
+                        <td class="eng-test-test-value eng-test-toefl-col" data-label="TOEFL iBT">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">Human + AI</div>
+                                <div class="eng-test-details">Combined scoring approach</div>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-ielts-col eng-test-highlight" data-label="IELTS Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">Human Examiner</div>
+                                <div class="eng-test-details">Face-to-face speaking test</div>
+                                <span class="eng-test-best-badge">Most Personal</span>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-pte-col" data-label="PTE Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">AI Only</div>
+                                <div class="eng-test-details">Fully automated system</div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="eng-test-feature-row eng-test-fade-in">
+                        <td class="eng-test-feature-name">Global Acceptance</td>
+                        <td class="eng-test-test-value eng-test-toefl-col eng-test-highlight" data-label="TOEFL iBT">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">13,000+ institutions</div>
+                                <div class="eng-test-details">Most widely accepted</div>
+                                <span class="eng-test-best-badge">Top Choice</span>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-ielts-col" data-label="IELTS Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">12,000+ institutions</div>
+                                <div class="eng-test-details">Preferred in UK and Commonwealth</div>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-pte-col" data-label="PTE Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">3,300+ institutions</div>
+                                <div class="eng-test-details">Fast-growing acceptance</div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="eng-test-feature-row eng-test-fade-in">
+                        <td class="eng-test-feature-name">Results Time</td>
+                        <td class="eng-test-test-value eng-test-toefl-col" data-label="TOEFL iBT">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">4-8 days</div>
+                                <div class="eng-test-details">Electronic score reports</div>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-ielts-col" data-label="IELTS Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">5-13 days</div>
+                                <div class="eng-test-details">Computer: 5-7 days, Paper: 13 days</div>
+                            </div>
+                        </td>
+                        <td class="eng-test-test-value eng-test-pte-col eng-test-highlight" data-label="PTE Academic">
+                            <div class="eng-test-content">
+                                <div class="eng-test-metric">1-5 days</div>
+                                <div class="eng-test-details">Fastest results available</div>
+                                <span class="eng-test-best-badge">Quickest</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+<!-- CONTACT FORM$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+  <div class="contact-sec-wrapper">
+    <div class="contact-sec-container" tabindex="-1">
+      <div class="contact-sec-info-side">
+        <div class="contact-sec-info-content">
+          <h2>Let's Connect</h2>
+          <p>
+            Have questions or Need Guidence? Reach out to us
+            through any of these channels or fill out the contact form.
+          </p>
+
+          <div class="contact-sec-methods">
+            <div class="contact-sec-method" id="emailMethod" tabindex="0" role="button" aria-label="Copy email contact@example.com">
+              <div class="contact-sec-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-sec-details">
+                <h3>Email Us</h3>
+                <p>internationalimmigration2022@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-sec-method" id="phoneMethod" tabindex="0" role="button" aria-label="Copy phone number +1 234 567 8900">
+              <div class="contact-sec-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-sec-details">
+                <h3>Call Us</h3>
+                <p>+91 8779676232</p>
+              </div>
+            </div>
+
+            <div class="contact-sec-method" id="locationMethod" tabindex="0" role="button" aria-label="Our location: 123 Business Ave, Suite 400">
+              <div class="contact-sec-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-sec-details">
+                <h3>Visit Us</h3>
+                <p>Phase 1, Office No.16, Rutu Riverside Estate, near KM Agrawal College, opposite Vedant Kalyan Hospital, Kolivali, Khadakpada, Kalyan, Maharashtra 421301</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-sec-social-links" aria-label="Social media links">
+            <a
+              href="https://www.facebook.com/people/International-Immigration/61550893840254/?mibextid=ZbWKwL"
+              class="contact-sec-social-link facebook"
+              aria-label="Facebook"
+              data-tooltip="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <!-- <a
+              href="#"
+              class="contact-sec-social-link twitter"
+              aria-label="Twitter"
+              data-tooltip="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a> -->
+            <a
+              href="https://www.linkedin.com/company/internationalimmigration/"
+              class="contact-sec-social-link linkedin"
+              aria-label="LinkedIn"
+              data-tooltip="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/international_immigration._/"
+              class="contact-sec-social-link instagram"
+              aria-label="Instagram"
+              data-tooltip="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-sec-form-side">
+        <div class="contact-sec-form-header">
+          <h2>Send a Message</h2>
+          <p>Fill out the form below and we'll get back to you soon.</p>
+        </div>
+
+        <form class="contact-sec-form" id="contactFormToefl" novalidate>
+          <div class="contact-sec-input-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+
+          <div class="contact-sec-input-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+          </div>
+
+          <div class="contact-sec-input-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="contact-sec-input-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="contact-sec-submit-btn" id="submitBtn" aria-live="polite">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+
+          <div class="contact-sec-success-message" id="successMessage" role="alert" aria-live="assertive">
+            <i class="fas fa-check-circle"></i> Thank you! Your message has been sent.
+          </div>
+        </form>
+        
+          <div id="formMessage"></div>
+      </div>
+    </div>
+  </div>
+  <!-- WhatsApp Floating Help Button -->
+  <a
+    href="https://api.whatsapp.com/send?phone=918779676232"
+    class="whatsapp-container"
+    target="_blank"
+  >
+    <i class="fab fa-whatsapp"></i>
+    Need Help?
+  </a>
+   <!-- =================  footer ==================   -->
+   <!-- Footer Starts -->
+  <footer class="footer">
+    <div class="footer-main">
+      <!-- Left Column -->
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="Logo" />
+          <!-- <h2><span style="color: #ffffff;">International</span>  <span style="color: rgb(255, 255, 255);">  Immigration</span> </h2> -->
+        </div>
+        <p>
+          Your premier destination for comprehensive Educational Consulting Services. We empower ambitious students worldwide with the knowledge and guidance they need to excel in their pursuit of higher education.
+        </p>
+        <div class="footer-socials-heading">Follow us</div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61550893840254&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/international_immigration._/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/internationalimmigration/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Column -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#visa-services-wrapper">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> admin@internationalimmigration.com</p>
+        <p><i class="fas fa-phone-alt"></i> +91 877 967 6232</p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© 2025 International Immigration. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="/frontend/js/Tf_script.js"></script>
+    <script>
+         //backend url to be updated
+        const BACKEND_URL = "https://your-backend.onrender.com";
+  document.getElementById('contactFormToefl').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form action (no page refresh)
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()); // Convert to object
+
+    try {
+      const res = await fetch(`${BACKEND_URL}/send-contactFormToefl`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        form.reset(); // optional: clears the form
+      } else {
+        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+      }
+    } catch (err) {
+      console.error('Error:', err);
+      document.getElementById('formMessage').innerHTML = `<p style="color: red;">Something went wrong!</p>`;
+    }
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const infoSide = document.querySelector(".contact-sec-info-side");
+  const formSide = document.querySelector(".contact-sec-form-side");
+  const inputGroups = document.querySelectorAll(".contact-sec-input-group");
+
+  if (infoSide && formSide) {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Slide in panels
+            infoSide.classList.add("visible");
+            formSide.classList.add("visible");
+
+            // Staggered input reveal
+            inputGroups.forEach((group, index) => {
+              setTimeout(() => {
+                group.classList.add("visible");
+              }, index * 150); // 150ms delay between each
+            });
+
+            obs.disconnect(); // Run only once
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(infoSide);
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>French Language Course</title>
+  <link rel="stylesheet" href="/frontend/css/styles2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!--   NAV BAR++++++ -->
+         <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="LOGO"></div>
+
+      <input type="checkbox" id="menu-toggle" />
+      <label class="hamburger" for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="nav-links">
+        <a href="/frontend/index.html">Home</a>
+        <a href="/frontend/about.html">About</a>
+        <a href="#visa-services-wrapper">Services</a>
+
+        <div class="dropdown">
+          <div class="selected">Languages
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" fill="none"/>
+            </svg>
+          </div>
+          <div class="options">
+            <a href="/frontend/german.html">German</a>
+            <a href="/frontend/french.html">French</a>
+            <a href="/frontend/ielts.html">IELTS</a>
+            <a href="/frontend/toefl.html">Toefl</a>
+          </div>
+        </div>
+
+        <a href="/frontend/contact.html">Contact</a>
+        <a href="/frontend/blogs.html">Blogs</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--Hero section-->
+  <section class="french-hero-section">
+    <div class="french-overlay"></div>
+    <div class="french-hero-content">
+      <h1><span>Master the French <br>Language</span> – <strong>Unlock Global <br>Opportunities!</strong></h1>
+      <p>Learn French from certified experts and become fluent for study, work, or immigration.</p>
+      <div class="french-cta-buttons">
+        <button class="french-btn french-btn-primary"><img src="/frontend/assets/assets/french/page.png" alt=""><a href="#french-class-section"> Enroll Now</a></button>
+        <button class="french-btn french-btn-secondary"><img src="/frontend/assets/assets/french/telephone.png" alt=""><a href="#inquiryForm"> Book a Free Trial </a></button>
+      </div>
+    </div>
+  </section>
+
+  <!--Why learn french-->
+  <section class="french-benefits-section">
+    <h2 class="french-benefits-title">Why French is Worth Learning?</h2>
+    <div class="french-benefits-grid">
+      <div class="french-benefit-card">
+        <div class="french-icon"><img src="/frontend/assets/assets/french/emerging-industries-unscreen.gif" alt=""></div>
+        <h3>Spoken in 29 countries worldwide</h3>
+        <p>Connect with over 280 million French speakers globally</p>
+      </div>
+      <div class="french-benefit-card">
+        <div class="french-icon"><img src="/frontend/assets/assets/french/graduate-unscreen.gif" alt=""></div>
+        <h3>Required for study in France & Canada</h3>
+        <p>Essential for universities and immigration programs</p>
+      </div>
+      <div class="french-benefit-card">
+        <div class="french-icon"><img src="/frontend/assets/assets/french/job-seeking-unscreen.gif" alt=""></div>
+        <h3>Opens doors to MNCs and government jobs</h3>
+        <p>Enhance your career prospects significantly</p>
+      </div>
+      <div class="french-benefit-card">
+        <div class="french-icon"><img src="/frontend/assets/assets/french/opportunities-unscreen.gif" alt=""></div>
+        <h3>Boosts cognitive skills and confidence</h3>
+        <p>Improve memory, multitasking, and mental flexibility</p>
+      </div>
+    </div>
+  </section>
+
+  <!--French level section-->
+  <!-- <section class="french-levels-section">
+    <h2 class="french-levels-title">Choose Your Learning Level</h2>
+    <p class="french-levels-subtitle">From beginners to advanced – we have a course for everyone.</p>
+    <div class="french-levels-grid">
+      <div class="french-level-card beginner">
+        <h3>A1–A2</h3>
+        <h4>Beginner</h4>
+        <p>Basic phrases, grammar, conversation</p>
+        <ul>
+          <li>Essential vocabulary</li>
+          <li>Basic grammar rules</li>
+          <li>Simple conversations</li>
+          <li>Pronunciation basics</li>
+        </ul>
+        <p class="duration">Duration: 3–4 months</p>
+        <button class="french-btn">Learn More</button>
+      </div>
+      <div class="french-level-card intermediate">
+        <h3>B1–B2</h3>
+        <h4>Intermediate</h4>
+        <p>Work, travel, and interaction fluency</p>
+        <ul>
+          <li>Complex conversations</li>
+          <li>Professional French</li>
+          <li>Travel situations</li>
+          <li>Cultural understanding</li>
+        </ul>
+        <p class="duration">Duration: 4–5 months</p>
+        <button class="french-btn">Learn More</button>
+      </div>
+      <div class="french-level-card advanced">
+        <h3>C1–C2</h3>
+        <h4>Advanced</h4>
+        <p>Native-like fluency, formal communication</p>
+        <ul>
+          <li>Academic French</li>
+          <li>Business communication</li>
+          <li>Literature comprehension</li>
+          <li>Advanced writing</li>
+        </ul>
+        <p class="duration">Duration: 5–6 months</p>
+        <button class="french-btn">Learn More</button>
+      </div>
+    </div>
+  </section> -->
+
+  <!--Start at your level-->
+<!-- <h2>Start at Your Level</h2>
+  <p class="subtitle">Choose your fluency stage and grow from there.</p>
+
+  <div class="levels-container">
+    <div class="level-card">
+      <div class="level-header">
+        <div class="level-badge a1">A1</div>
+        <div>15%</div>
+      </div>
+      <div class="level-title">Beginner</div>
+      <div class="level-desc">Understand basic phrases and greetings</div>
+      <div class="progress-bar">
+        <div class="progress-fill a1" style="width: 15%"></div>
+      </div>
+    </div>
+
+    <div class="level-card">
+      <div class="level-header">
+        <div class="level-badge a2">A2</div>
+        <div>30%</div>
+      </div>
+      <div class="level-title">Elementary</div>
+      <div class="level-desc">Talk about daily routines and needs</div>
+      <div class="progress-bar">
+        <div class="progress-fill a2" style="width: 30%"></div>
+      </div>
+    </div>
+
+    <div class="level-card">
+      <div class="level-header">
+        <div class="level-badge b1">B1</div>
+        <div>50%</div>
+      </div>
+      <div class="level-title">Intermediate</div>
+      <div class="level-desc">Deal with travel, work, and social topics</div>
+      <div class="progress-bar">
+        <div class="progress-fill b1" style="width: 50%"></div>
+      </div>
+    </div>
+
+    <div class="level-card">
+      <div class="level-header">
+        <div class="level-badge b2">B2</div>
+        <div>70%</div>
+      </div>
+      <div class="level-title">Upper-Intermediate</div>
+      <div class="level-desc">Argue opinions and read complex texts</div>
+      <div class="progress-bar">
+        <div class="progress-fill b2" style="width: 70%"></div>
+      </div>
+    </div>
+
+    <div class="level-card">
+      <div class="level-header">
+        <div class="level-badge c1">C1</div>
+        <div>90%</div>
+      </div>
+      <div class="level-title">Advanced</div>
+      <div class="level-desc">Speak fluently with native-like flow</div>
+      <div class="progress-bar">
+        <div class="progress-fill c1" style="width: 90%"></div>
+      </div>
+    </div>
+
+    <div class="level-card">
+      <div class="level-header">
+        <div class="level-badge c2">C2</div>
+        <div>100%</div>
+      </div>
+      <div class="level-title">Proficient</div>
+      <div class="level-desc">Understand native media and academic texts</div>
+      <div class="progress-bar">
+        <div class="progress-fill c2" style="width: 100%"></div>
+      </div>
+    </div>
+  </div> -->
+
+  <!--class section-->
+  <section class="french-class-section" id="french-class-section">
+  <h4 class="french-subtitle">LEARN FRENCH YOUR WAY</h4>
+  <h2 class="french-title">Flexible Class Options for  <span>Every Learner</span></h2>
+
+  <div class="french-class-cards">
+    <!-- Group Classes -->
+    <div class="french-class-card">
+      <div class="french-class-icon"><img src="/frontend/assets/assets/french/people.png" alt=""></div>
+      <h3>Group Classes</h3>
+      <p>Small Group (4 students): ₹14,500</p>
+      <p>Large Group (10 students): ₹7,500</p>
+      <p><strong>From ₹7,500</strong></p>
+      <button class="french-enquire-btn" onclick="openForm('Group Class')">Enquire</button>
+    </div>
+
+    <!-- 1-on-1 Training -->
+    <div class="french-class-card">
+      <div class="french-class-icon"><img src="/frontend/assets/assets/french/two-businessmen-in-meeting.png" alt=""></div>
+      <h3>1-on-1 Training</h3>
+      <p>₹599 per session (40 sessions per level)</p>
+      <p>Personal mentorship & schedule flexibility</p>
+      <p><strong>₹599 / session</strong></p>
+      <button class="french-enquire-btn" onclick="openForm('1-on-1 Training')">Enquire</button>
+    </div>
+
+    <!-- Self Study Package -->
+    <div class="french-class-card">
+      <div class="french-class-icon"><img src="/frontend/assets/assets/french/self-learning.png" alt=""></div>
+      <h3>Self Study Package</h3>
+      <p>Live Recorded Sessions + E-books (Textbook, Workbook, Glossary)</p>
+      <p>5 Full Length Mock Tests</p>
+      <p><strong>₹1,999</strong></p>
+      <button class="french-enquire-btn" onclick="openForm('Self Study Package')">Enquire</button>
+    </div>
+  </div>
+</section>
+
+<!--reuired form section -->
+<div id="enquiryModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeForm()">&times;</span>
+    <h2>Enquiry Form</h2>
+    <form id="french-req">
+      <label for="course">Course Type:</label>
+      <input type="text" id="courseInput" name="course" readonly>
+
+      <label for="name">Your Name:</label>
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
+
+      <label for="message">Message:</label>
+      <textarea name="message" placeholder="Your message..." rows="3" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="formMessage"></div>
+  </div>
+</div>
+
+    <!--French classes groups-->
+    <section class="french-flipcards-section">
+  <!-- <h2 class="french-flipcards-title">Start Small, Master Every Level</h2>
+  <p class="french-flipcards-subtitle">Learn at Your Own Pace</p>
+  <div class="french-flipcards-grid"> -->
+    <!-- Card A1 -->
+    <!-- <div class="french-flipcard">
+      <div class="french-flip-inner">
+        <div class="french-flip-front">
+          <h3>A1</h3>
+          <p>Beginner</p>
+        </div>
+        <div class="french-flip-back">
+          <h3>A1 <br><span>Beginner</span></h3>
+          <p><strong>Price:</strong> ₹9,000</p>
+          <p>Understand familiar everyday expressions and very basic phrases.</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Card A2 -->
+    <!-- <div class="french-flipcard">
+      <div class="french-flip-inner">
+        <div class="french-flip-front">
+          <h3>A2</h3>
+          <p>Elementary</p>
+        </div>
+        <div class="french-flip-back">
+          <h3>A2 <br><span>Elementary</span></h3>
+          <p><strong>Price:</strong> ₹11,000</p>
+          <p>Understand frequently used expressions related to areas of relevance.</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Card B1 -->
+    <!-- <div class="french-flipcard">
+      <div class="french-flip-inner">
+        <div class="french-flip-front">
+          <h3>B1</h3>
+          <p>Intermediate</p>
+        </div>
+        <div class="french-flip-back">
+          <h3>B1 <br><span>Intermediate</span></h3>
+          <p><strong>Price:</strong> ₹13,000</p>
+          <p>Can deal with most situations likely to arise while traveling. Can produce simple connected text.</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Card B2 -->
+    <!-- <div class="french-flipcard">
+      <div class="french-flip-inner">
+        <div class="french-flip-front">
+          <h3>B2</h3>
+          <p>Upper Intermediate</p>
+        </div>
+        <div class="french-flip-back">
+          <h3>B2 <br><span>Upper Intermediate</span></h3>
+          <p><strong>Price:</strong> ₹15,000</p>
+          <p>Can interact with a degree of fluency and spontaneity without strain.</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Card C1 -->
+    <!-- <div class="french-flipcard">
+      <div class="french-flip-inner">
+        <div class="french-flip-front">
+          <h3>C1</h3>
+          <p>Advanced</p>
+        </div>
+        <div class="french-flip-back">
+          <h3>C1 <br><span>Advanced</span></h3>
+          <p><strong>Price:</strong> ₹17,000</p>
+          <p>Can express ideas fluently and spontaneously without searching for expressions.</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Card C2 -->
+    <!-- <div class="french-flipcard">
+      <div class="french-flip-inner">
+        <div class="french-flip-front">
+          <h3>C2</h3>
+          <p>Proficient</p>
+        </div>
+        <div class="french-flip-back">
+          <h3>C2 <br><span>Proficient</span></h3>
+          <p><strong>Price:</strong> ₹19,000</p>
+          <p>Can summarize information from different spoken and written sources, reconstructing arguments.</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="inclusions-section">
+    <h2>Start Small, Master Every Level</h2>
+    <p>Learn at Your Own Pace</p>
+
+    <!-- <div class="inclusions-grid">
+      <div class="inclusion-card">
+        <div class="icon-circle"><p>A1</p></div>
+        <div class="inclusion-title">Beginner</div>
+        <div class="inclusion-desc">Understand familiar everyday expressions and very basic phrases.</div>
+      </div>
+
+      <div class="inclusion-card">
+        <div class="icon-circle"><p>A2</p></div>
+        <div class="inclusion-title">Elementary</div>
+        <div class="inclusion-desc">Understand frequently used expressions related to areas of relevance.</div>
+      </div>
+
+      <div class="inclusion-card">
+        <div class="icon-circle"><p>B1</p></div>
+        <div class="inclusion-title">Intermediate</div>
+        <div class="inclusion-desc">Can deal with most situations likely to arise while traveling. Can produce simple connected text.</div>
+      </div>
+
+      <div class="inclusion-card">
+        <div class="icon-circle"><p>B2</p></div>
+        <div class="inclusion-title">Upper Intermediate</div>
+        <div class="inclusion-desc">Can interact with a degree of fluency and spontaneity without strain.</div>
+      </div>
+
+      <div class="inclusion-card">
+        <div class="icon-circle"><p>C1</p></div>
+        <div class="inclusion-title">Advanced</div>
+        <div class="inclusion-desc">Can express ideas fluently and spontaneously without searching for expressions.</div>
+      </div>
+
+      <div class="inclusion-card">
+        <div class="icon-circle"><p>C2</p></div>
+        <div class="inclusion-title">Proficient</div>
+        <div class="inclusion-desc">Can summarize information from different spoken and written sources, reconstructing arguments.</div>
+      </div>
+    </div> -->
+
+    <div class="french-cards-container">
+  <div class="french-card" data-text="Understand familiar everyday expressions and very basic phrases." data-level="25">
+    <div class="french-card-content">A1 <br> Beginner</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="french-card" data-text="Understand frequently used expressions related to areas of relevance." data-level="30">
+    <div class="french-card-content">A2 <br> Elementary</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="french-card" data-text="Can deal with most situations likely to arise while traveling. Can produce simple connected text." data-level="50">
+    <div class="french-card-content">B1 <br> Intermediate</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="french-card" data-text="Can interact with a degree of fluency and spontaneity without strain." data-level="70">
+    <div class="french-card-content">B2 <br> Upper Intermediate</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="french-card" data-text="Can express ideas fluently and spontaneously without searching for expressions." data-level="85">
+    <div class="french-card-content">C1 <br> Advanced</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="french-card" data-text="Can summarize information from different spoken and written sources, reconstructing arguments." data-level="100">
+    <div class="french-card-content">C2 <br> Proficient</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="tagline">
+      "Every class comes with love, support, and accountability!"
+    </div>
+  </div>
+</section>
+
+  <!--Includede in course-->
+   <section class="french-inclusions-section">
+    <h2 class="french-inclusions-title">Comprehensive Features of Our French Program</h2>
+    <div class="french-inclusions-grid">
+      <div class="french-inclusion-card">
+        <div class="french-inclusion-icon"><img src="/frontend/assets/assets/french/video-camera.png" alt=""></div>
+        <p>Live interactive classes</p>
+      </div>
+      <div class="french-inclusion-card">
+        <div class="french-inclusion-icon"><img src="/frontend/assets/assets/french/document.png" alt=""></div>
+        <p>Exam prep for TEF/TCF/DELF</p>
+      </div>
+      <div class="french-inclusion-card">
+        <div class="french-inclusion-icon"><img src="/frontend/assets/assets/french/headphones.png" alt=""></div>
+        <p>Study materials and recordings</p>
+      </div>
+      <div class="french-inclusion-card">
+        <div class="french-inclusion-icon"><img src="/frontend/assets/assets/french/messenger.png" alt=""></div>
+        <p>Weekly speaking and listening tests</p>
+      </div>
+      <div class="french-inclusion-card">
+        <div class="french-inclusion-icon"><img src="/frontend/assets/assets/french/employee.png" alt=""></div>
+        <p>1-on-1 doubt sessions</p>
+      </div>
+    </div>
+  </section>
+
+  <!--pricing section-->
+  <!-- <section class="french-pricing-section">
+    <h2 class="french-pricing-title">Affordable & Transparent Pricing</h2>
+    <div class="french-pricing-grid">
+      <div class="french-price-card">
+        <h3>A1 + A2</h3>
+        <p class="french-price">₹9,999</p>
+        <p class="french-duration">3–4 months</p>
+        <ul>
+          <li>✅ Basic French foundation</li>
+          <li>✅ Essential vocabulary</li>
+          <li>✅ Grammar fundamentals</li>
+          <li>✅ Simple conversations</li>
+          <li>✅ Cultural introduction</li>
+        </ul>
+        <button class="french-btn">Choose Plan</button>
+      </div>
+      <div class="french-price-card french-most-popular">
+        <div class="french-popular-badge">Most Popular</div>
+        <h3>B1 + B2</h3>
+        <p class="french-price">₹14,999</p>
+        <p class="french-duration">4–5 months</p>
+        <ul>
+          <li>✅ Intermediate proficiency</li>
+          <li>✅ Professional French</li>
+          <li>✅ Travel conversations</li>
+          <li>✅ Complex grammar</li>
+          <li>✅ Business basics</li>
+        </ul>
+        <button class="french-btn french-btn-primary-plan">Choose Plan</button>
+      </div>
+      <div class="french-price-card">
+        <h3>Full Course (A1 to C2)</h3>
+        <p class="french-price">₹24,999</p>
+        <p class="french-duration">12 months</p>
+        <ul>
+          <li>✅ Complete mastery</li>
+          <li>✅ Native-like fluency</li>
+          <li>✅ Academic French</li>
+          <li>✅ Business communication</li>
+          <li>✅ Exam preparation</li>
+          <li>✅ Lifetime support</li>
+        </ul>
+        <button class="french-btn">Choose Plan</button>
+      </div>
+    </div>
+  </section> -->
+
+  <!--..........................FOUNDERS WORDS............-->
+
+<section class="founder-section">
+    <div class="founder-image">
+      <div class="circle">
+        <img src="/frontend/assets/assets/french/Founder-profile.png" alt="Founder Photo">
+      </div>
+    </div>
+
+    
+    <div class="founder-content">
+      <h2>Words from Our Founder</h2>
+      <p>
+You’re ready for more. The world’s ready for you. And we’re ready to make it possible.      </p>
+      <div class="founder-buttons">
+        <a href="https://www.linkedin.com/in/akashhjaiswal/" target="_blank">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=918779676232" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=admin@internationalimmigration.com" target="_blank">
+          <i class="fas fa-envelope"></i> Gmail
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--Free trial form-->
+  <section class="french-form-section">
+    <h2 class="french-form-title">Not Sure Yet? Try a Class First!</h2>
+    <div class="french-form-container">
+      <h2>Book a Free Demo Class</h2>
+      <form class="french-demo-form" action="/send" method="POST" id="inquiryForm">
+        <input type="text" placeholder="Your Name *" name="username" required>
+        <div class="french-input-row">
+          <input type="text" placeholder="Country Code (e.g. 91)" name="country-code">
+          <input type="text" placeholder="Phone Number *" required name="phone-number">
+          <input type="email" placeholder="Enter your email" required name="email">
+        </div>
+        <div class="lang_lvl">
+          <p>Please select your language level:</p>
+          <div class="custom-radio-grid">
+            <label class="custom-radio">
+              <input type="radio" name="language_lvl" value="A1">
+              <span class="radio-btn"></span>
+              A1
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="language_lvl" value="A2">
+              <span class="radio-btn"></span>
+              A2
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="language_lvl" value="B1">
+              <span class="radio-btn"></span>
+              B1
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="language_lvl" value="B2">
+              <span class="radio-btn"></span>
+              B2
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="language_lvl" value="C1">
+              <span class="radio-btn"></span>
+              C1
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="language_lvl" value="C2">
+              <span class="radio-btn"></span>
+              C2
+            </label>
+          </div>
+        </div>
+        <textarea placeholder="Any other queries?" name="message"></textarea>
+        <button type="submit" class="french-form-submit">Book Class</button>
+      </form>
+    </div>
+  </section>
+  <!-- WhatsApp Floating Help Button -->
+  <a
+    href="https://api.whatsapp.com/send?phone=918779676232"
+    class="whatsapp-container"
+    target="_blank"
+  >
+    <i class="fab fa-whatsapp"></i>
+    Need Help?
+  </a>
+  <!-- =================  footer ==================   -->
+   <!-- Footer Starts -->
+  <footer class="footer">
+    <div class="footer-main">
+      <!-- Left Column -->
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="Logo" />
+        </div>
+        <p>
+          Your premier destination for comprehensive Educational Consulting Services. We empower ambitious students worldwide with the knowledge and guidance they need to excel in their pursuit of higher education.
+        </p>
+        <div class="footer-socials-heading">Follow us</div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61550893840254&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/international_immigration._/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/internationalimmigration/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Column -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> admin@internationalimmigration.com</p>
+        <p><i class="fas fa-phone-alt"></i> +91 877 967 6232</p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© 2025 International Immigration. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+<script>
+   //backend url to be updated
+        const BACKEND_URL = "https://your-backend.onrender.com";
+  document.getElementById('inquiryForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const formData = {
+      username: form.username.value,
+      email: form.email.value,
+      message: form.message.value,
+      'phone-number': form['phone-number'].value,
+      'country-code': form['country-code'].value,
+      language_lvl: form.language_lvl.value
+    };
+
+    try {
+      const res = await fetch(`${BACKEND_URL}/send`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const text = await res.text();
+
+      if (res.ok) {
+        alert("✅ Email sent successfully!");
+        form.reset();
+      } else {
+        alert("❌ Failed to send email.");
+      }
+
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      alert("❌ An error occurred.");
+    }
+  });
+</script>
+<script>
+  function openForm(courseType) {
+    document.getElementById('courseInput').value = courseType;
+    document.getElementById('enquiryModal').style.display = 'block';
+  }
+
+  function closeForm() {
+    document.getElementById('enquiryModal').style.display = 'none';
+  }
+
+  // Close if clicked outside
+  window.onclick = function(event) {
+    const modal = document.getElementById('enquiryModal');
+    if (event.target == modal) {
+      closeForm();
+    }
+  }
+</script>
+<script>
+  document.getElementById('french-req').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form action (no page refresh)
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()); // Convert to object
+
+    try {
+      const res = await fetch(`${BACKEND_URL}/send-frenchReq`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        form.reset(); // optional: clears the form
+      } else {
+        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+      }
+    } catch (err) {
+      console.error('Error:', err);
+      document.getElementById('formMessage').innerHTML = `<p style="color: red;">Something went wrong!</p>`;
+    }
+  });
+</script>
+<script>
+  const cards = document.querySelectorAll('.french-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const card = entry.target;
+        const progressBar = card.querySelector('.french-progress-bar');
+        const percentageText = card.querySelector('.french-percentage-text');
+        const level = parseInt(card.getAttribute('data-level'));
+
+        progressBar.style.width = level + '%';
+
+        let current = 0;
+        const interval = setInterval(() => {
+          if (current >= level) {
+            clearInterval(interval);
+          } else {
+            current++;
+            percentageText.textContent = current + '%';
+          }
+        }, 20);
+
+        percentageText.style.opacity = 1;
+        observer.unobserve(card);
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
+
+</html>

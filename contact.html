@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Global Pathways</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+     :root {
+            --gp-primary: #3B82F6;
+            --gp-primary-light: #EFF6FF;
+            --gp-primary-dark: #2563EB;
+            --gp-dark: #1F2937;
+            --gp-darker: #111827;
+            --gp-light: #F9FAFB;
+            --gp-lighter: #FFFFFF;
+            --gp-gray: #6B7280;
+            --gp-light-gray: #E5E7EB;
+            --gp-success: #10B981;
+            --gp-map-height: 400px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--gp-dark);
+            line-height: 1.6;
+            background: #fffcea;
+        }
+        
+        .ct-heading {
+            text-align: center;
+            font-family: plus jakarta sans;
+            font-size: 3.4rem;
+            margin-top: 74px;
+            color: #053f6a;
+            font-weight: 700;
+        }
+        
+        .gp-contact-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem; 
+        }
+        
+        .gp-contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+        
+        .gp-contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+        }
+        
+        .gp-contact-info {
+            padding: 1rem;
+        }
+        
+        .gp-contact-info h1 {
+            font-size: 2.75rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #f0d321;
+            font-family: golos text;
+        }
+        
+        .gp-contact-info p {
+            
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 400;
+            font-family: golos text;
+        }
+        
+        .gp-contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .gp-contact-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            padding: 1.75rem;
+            background: #053f6a;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            
+        }
+        
+        .gp-contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-color: var(--gp-primary-light);
+        }
+        
+        .gp-contact-icon {
+            width: 52px;
+            height: 52px;
+            background: #f0d4211e;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f0d321;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .gp-contact-card:hover .gp-contact-icon {
+            background: #f0d321;
+            color: white;
+        }
+        
+        .gp-contact-details h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .gp-contact-details a, .gp-contact-details p {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 400;
+        }
+        
+        .gp-contact-details a:hover {
+            color: var(--gp-primary);
+        }
+        
+        .gp-social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+        
+        .gp-social-link {
+            width: 44px;
+            height: 44px;
+            border-radius: 50px;
+            background: #f0d321;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #053f6a;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            
+        }
+        
+        .gp-social-link:hover {
+            background: #053f6a;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(5, 40, 106, 0.188);
+            border-color:#2d9165 ;
+        }
+        
+        .gp-contact-form-section {
+            width: 100%;
+        }
+        
+        .gp-contact-form-container {
+            background: #053f6a;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            
+        }
+        
+        .gp-form-header {
+            margin-bottom: 2rem;
+        }
+        
+        .gp-form-header h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gp-form-header p {
+            color: #fff;
+            font-weight: 400;
+        }
+        
+        .gp-form-group {
+            margin-bottom: 1.75rem;
+            position: relative;
+        }
+        
+        .gp-form-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: #f0d321;
+            font-size: 0.95rem;
+        }
+        
+        .gp-form-control {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 1px solid #f0d321;
+            border-radius: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #fffcea;
+            color: var(--gp-dark);
+        }
+        
+        .gp-form-control:focus {
+            outline: none;
+            border-color: var(--gp-primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+            background: var(--gp-lighter);
+        }
+        
+        select.gp-form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1rem;
+        }
+        
+        textarea.gp-form-control {
+            min-height: 160px;
+            resize: vertical;
+        }
+        
+        .gp-submit-btn {
+            background: #f0d321;
+            color: #053f6a;
+            border: none;
+            padding: 1.1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 27px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .gp-submit-btn:hover {
+            background: rgb(14, 110, 190);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px rgba(4, 109, 25, 0.3);
+        }
+        
+        .gp-submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .gp-success-message {
+            display: none;
+            background: var(--gp-success);
+            color: white;
+            padding: 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 1.5rem;
+            animation: gpFadeIn 0.5s ease;
+            font-weight: 500;
+        }
+        
+        @keyframes gpFadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .gp-contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .gp-contact-wrapper {
+                padding: 2rem 1.5rem;
+            }
+            
+            .ct-heading {
+                font-size: 2.5rem;
+                margin-top: 60px;
+            }
+            
+            .gp-contact-info h1 {
+                font-size: 2.25rem;
+            }
+            
+            .gp-contact-form-container {
+                padding: 1.75rem;
+            }
+            
+            .gp-contact-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem;
+            }
+            
+            .gp-contact-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
+            
+            .gp-form-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .ct-heading {
+                font-size: 2rem;
+                margin-top: 66px;
+            }
+            
+            .gp-contact-info h1 {
+                font-size: 1.75rem;
+            }
+            
+            .gp-contact-info p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .gp-contact-card {
+                padding: 1.25rem;
+            }
+            
+            .gp-contact-details h3 {
+                font-size: 1.1rem;
+            }
+            
+            .gp-contact-details a, 
+            .gp-contact-details p {
+                font-size: 0.9rem;
+            }
+            
+            .gp-form-container {
+                padding: 1.5rem;
+            }
+            
+            .gp-form-header h2 {
+                font-size: 1.3rem;
+            }
+            
+            .gp-form-header p {
+                font-size: 0.9rem;
+            }
+            
+            .gp-form-group label {
+                font-size: 0.85rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .gp-form-control {
+                font-size: 0.9rem;
+                padding: 0.8rem 1rem;
+            }
+            
+            .gp-submit-btn {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .gp-social-links {
+                justify-content: center;
+            }
+            
+            iframe {
+                height: 300px;
+            }
+        }
+        
+        /* NAVBAR STYLES */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: transparent;
+            backdrop-filter: blur(1px);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 0px;
+            padding-left: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+        
+        .logo img {
+            max-height: 60px;
+            height: auto;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-family: fredoka;
+            align-items: center;
+            font-weight: 400;
+            padding-right: 70px;
+        }
+
+        .nav-links a,
+        .selected {
+            position: relative;
+            text-decoration: none;
+            color: #053f6a;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover,
+        .selected:hover {
+            background-color: #f0d321;
+            color: #053f6a;
+        }
+
+        .dropdown {
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fffcea;
+            border-radius: 4px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            display: none;
+            flex-direction: column;
+            min-width: 120px;
+            z-index: 99;
+        }
+
+        .options a {
+            padding: 10px 12px;
+            text-decoration: none;
+            color: #053f6a;
+            white-space: nowrap;
+        }
+
+        .options a:hover {
+            background-color: #f0d321;
+            color: #053f6a;
+        }
+
+        .dropdown:hover .options {
+            display: flex;
+        }
+
+        /* Hamburger menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1100;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #053f6a;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hamburger animation to cross */
+        #menu-toggle:checked + .hamburger span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        #menu-toggle:checked + .hamburger span:nth-child(2) {
+            opacity: 0;
+        }
+
+        #menu-toggle:checked + .hamburger span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Hide checkbox */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: #fffcea;
+                backdrop-filter: blur(8px);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+                border-radius: 8px;
+                display: none;
+                width: 200px;
+                gap: 10px;
+            }
+
+            #menu-toggle:checked ~ .nav-links {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+                padding-right: 20px;
+            }
+
+            .dropdown .options {
+                position: static;
+                display: none;
+                box-shadow: none;
+                background: transparent;
+                padding-left: 15px;
+            }
+
+            .dropdown.active .options {
+                display: flex;
+            }
+
+            .nav-container {
+                padding-left: 26px;
+                padding-right: 23px;
+            }
+            
+            .nav-links a, .selected {
+                color: #000000;
+            }
+        }
+        @media (max-width:480px){
+            .logo img{
+                padding: 4px;
+            }
+        }
+        
+        /* FOOTER STYLES */
+        footer {
+            background: #fff7c7;
+            color: #ccc;
+            padding: 40px 20px 20px;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .footer-main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-left {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo img {
+            
+            height: 71px;
+        }
+
+        .footer-logo h2 {
+            font-size: 1.2rem;
+            color: white;
+            font-family: nunito;
+        }
+
+        .footer-left p {
+            margin: 15px 0;
+            max-width: 350px;
+            line-height: 1.2;
+            color: #053f6a;
+            font-size: 13px;
+        }
+
+        .footer-socials-heading {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #f0d321;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .footer-socials a {
+            background-color: #053f6a;
+            color: white;
+            font-size: 14px;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .footer-socials a:hover {
+            background-color: #f0d321;
+            color: rgb(6, 72, 101);
+        }
+
+        .footer-links,
+        .footer-contact {
+            min-width: 180px;
+        }
+
+        .footer-links h3,
+        .footer-contact h3 {
+            color: #f0d321;
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links ul li a {
+            text-decoration: none;
+            color: #053f6a;
+            transition: color 0.2s;
+        }
+
+        .footer-links ul li a:hover {
+            color: #b09b00;
+        }
+
+        .footer-contact p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #053f6a;
+        }
+
+        .footer-contact i {
+            color: #053f6a;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #053f6a;
+            margin-top: 30px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            color: #053f6a;
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            .footer-main {
+                flex-direction: column;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        /*$$$$$$$$$$$$44   WHATSAPP FLOATING $$$$$$$$$$$$$$$$$*/
+        .whatsapp-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      background-color: #25d366;
+      border-radius: 30px;
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      z-index: 1000;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-container:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp-container i {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="LOGO"></div>
+
+            <input type="checkbox" id="menu-toggle" />
+            <label class="hamburger" for="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="nav-links">
+                <a href="/frontend/index.html">Home</a>
+                <a href="/frontend/about.html">About</a>
+                <a href="#visa-services-wrapper">Services</a>
+
+                <div class="dropdown">
+                    <div class="selected">Languages
+                        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="options">
+                        <a href="/frontend/german.html">German</a>
+                        <a href="/frontend/french.html">French</a>
+                        <a href="/frontend/ielts.html">IELTS</a>
+            <a href="/frontend/toefl.html">Toefl</a>
+                    </div>
+                </div>
+
+                <a href="/frontend/contact.html">Contact</a>
+                <a href="/frontend/blogs.html">Blogs</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="ct-heading">Contact Us</div>
+    <div class="gp-contact-wrapper">
+        <div class="gp-contact-grid">
+            <div class="gp-contact-content">
+                <div class="gp-contact-info">
+                    <h1>Start Your Global Journey</h1>
+                    <p>Our expert consultants are ready to guide you through every step of your international adventure. Reach out today to begin your personalized pathway.</p>
+                    
+                    <div class="gp-contact-methods">
+                        <div class="gp-contact-card">
+                            <div class="gp-contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="gp-contact-details">
+                                <h3>Our Location</h3>
+                                <p>Phase 1, Office No.16,Rutu Riverside Estate,<br>near, KM Agrawal college, opposite Vedant Kalyan Hospital, Kolivali,Khadakpada,Kalyan<br>Maharashtra 421301</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gp-contact-card">
+                            <div class="gp-contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="gp-contact-details">
+                                <h3>Email Us</h3>
+                                <a href="mailto:admin@internationalimmigration.com">admin@internationalimmigration.com</a>
+                                <p>Response within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gp-contact-card">
+                            <div class="gp-contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="gp-contact-details">
+                                <h3>Call Us</h3>
+                                <a href="tel:+919867063140">+91 9867063140 /+91 8779676232</a>
+                                <p>Monday-Friday, 9am-6pm IST</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gp-social-links">
+                        <a href="https://www.linkedin.com/company/internationalimmigration/" class="gp-social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/international_immigration._/" class="gp-social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61550893840254&mibextid=ZbWKwL" class="gp-social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=918779676232" class="gp-social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 22L3.41152 16.8691C2.54422 15.3639 2.08876 13.6568 2.09099 11.9196C2.08095 6.44549 6.52644 2 11.99 2C14.6417 2 17.1315 3.02806 19.0062 4.9034C19.9303 5.82266 20.6627 6.91616 21.1611 8.12054C21.6595 9.32492 21.9139 10.6162 21.9096 11.9196C21.9096 17.3832 17.4641 21.8287 12 21.8287C10.3368 21.8287 8.71374 21.4151 7.26204 20.6192L2 22ZM7.49424 18.8349L7.79675 19.0162C9.06649 19.7676 10.5146 20.1644 11.99 20.1654C16.5264 20.1654 20.2263 16.4662 20.2263 11.9291C20.2263 9.73176 19.3696 7.65554 17.8168 6.1034C17.0533 5.33553 16.1453 4.72636 15.1453 4.31101C14.1452 3.89565 13.0728 3.68232 11.99 3.68331C7.44343 3.6839 3.74476 7.38316 3.74476 11.9202C3.74476 13.4724 4.17843 14.995 5.00502 16.3055L5.19645 16.618L4.35982 19.662L7.49483 18.8354L7.49424 18.8349Z" fill="#000000"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.52024 7.76662C9.33885 7.35303 9.13737 7.34298 8.96603 7.34298C8.81477 7.33294 8.65288 7.33294 8.48154 7.33294C8.32083 7.33294 8.04845 7.39321 7.81684 7.64549C7.58464 7.89719 6.95007 8.49217 6.95007 9.71167C6.95007 10.9318 7.83693 12.1111 7.95805 12.2724C8.07858 12.4337 9.67149 15.0139 12.192 16.0124C14.2883 16.839 14.712 16.6777 15.1657 16.6269C15.6189 16.5767 16.6275 16.0325 16.839 15.4476C17.0405 14.8733 17.0405 14.3693 16.9802 14.2682C16.9199 14.1678 16.748 14.1069 16.5064 13.9758C16.2541 13.8552 15.0446 13.2502 14.813 13.1693C14.5808 13.0889 14.4195 13.0487 14.2582 13.2904C14.0969 13.5427 13.623 14.0969 13.4724 14.2582C13.3306 14.4195 13.1799 14.4396 12.9377 14.3185C12.686 14.1979 11.8895 13.9356 10.9418 13.0889C10.2056 12.4331 9.71167 11.6171 9.56041 11.3755C9.41979 11.1232 9.54032 10.992 9.67149 10.8709C9.78257 10.7604 9.92378 10.579 10.0449 10.4378C10.1654 10.296 10.2056 10.1855 10.2966 10.0242C10.377 9.86292 10.3368 9.71167 10.2765 9.59114C10.2157 9.48006 9.74239 8.25997 9.52024 7.76603V7.76662Z" fill="#000000"></path>
+</svg>
+</a>
+
+                    </div>
+                </div>
+                
+                <div class="gp-contact-form-section">
+                    <div class="gp-contact-form-container">
+                        <div class="gp-form-header">
+                            <h2>Personalized Consultation Request</h2>
+                            <p>Complete this form and our specialist will contact you within 24 hours</p>
+                        </div>
+                        
+                        <form id="contactUsForm">
+                            <div class="gp-form-group">
+                                <label for="gpName">Full Name*</label>
+                                <input type="text" id="gpName" class="gp-form-control" name="username" placeholder=" Your name" required>
+                            </div>
+                            
+                            <div class="gp-form-group">
+                                <label for="gpEmail">Email Address*</label>
+                                <input type="email" id="gpEmail" class="gp-form-control" name="email" placeholder="your@email.com" required>
+                            </div>
+                            
+                            <div class="gp-form-group">
+                                <label for="gpService">Service Interest*</label>
+                                <select id="gpService" name="service"  class="gp-form-control" required>
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option value="study-abroad">Study Abroad Program</option>
+                                    <option value="work-abroad">Work Abroad Opportunity</option>
+                                    <option value="language-prep">Language Preparation</option>
+                                    <option value="pr-visa">Permanent Residency Visa</option>
+                                    <option value="business-visa">Business Visa Consultation</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="gp-form-group">
+                                <label for="gpMessage">Your Goals & Questions*</label>
+                                <textarea id="gpMessage" name="message" class="gp-form-control" placeholder="Tell us about your international goals and any specific questions..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="gp-submit-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                Send Message
+                            </button>
+                        </form>
+                        <div id="formMessage"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.2676941830196!2d73.1343517!3d19.2652947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be797482e7dde3d%3A0xc205313878748ba1!2sStudy%20Abroad%20-%20INTERNATIONAL%20IMMIGRATION!5e1!3m2!1sen!2sin!4v1753592568602!5m2!1sen!2sin"
+             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <!-- WhatsApp Floating Help Button -->
+  <a
+    href="https://api.whatsapp.com/send?phone=918779676232"
+    class="whatsapp-container"
+    target="_blank"
+  >
+    <i class="fab fa-whatsapp"></i>
+    Need Help?
+  </a>
+
+
+    <!-- =================  footer ==================   -->
+   <!-- Footer Starts -->
+  <footer class="footer">
+    <div class="footer-main">
+      <!-- Left Column -->
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="/frontend/assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="Logo" />
+          <!-- <h2><span style="color: #ffffff;">International</span>  <span style="color: rgb(255, 255, 255);">  Immigration</span> </h2> -->
+        </div>
+        <p>
+          Your premier destination for comprehensive Educational Consulting Services. We empower ambitious students worldwide with the knowledge and guidance they need to excel in their pursuit of higher education.
+        </p>
+        <div class="footer-socials-heading">Follow us</div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61550893840254&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/international_immigration._/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/internationalimmigration/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Column -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> admin@internationalimmigration.com</p>
+        <p><i class="fas fa-phone-alt"></i> +91 877 967 6232</p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© 2025 International Immigration. All rights reserved.</p>
+    </div>
+  </footer>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+       
+        // NAVBAR++++++++++++
+           // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      
+      // Handle dropdowns in mobile view
+      const dropdowns = document.querySelectorAll(".dropdown");
+      
+      dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector(".selected");
+        
+        selected.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdown.classList.toggle("active");
+          }
+        });
+      });
+      
+      // Close dropdowns when clicking outside
+      document.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+          dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("active");
+            }
+          });
+          
+          // Also close the mobile menu if clicking outside
+          if (!e.target.closest(".nav-container") && menuToggle.checked) {
+            menuToggle.checked = false;
+            navLinks.style.display = "none";
+          }
+        }
+      });
+    </script>
+    <script>
+        //backend url to be updated
+        const BACKEND_URL = "https://your-backend.onrender.com";
+  document.getElementById('contactUsForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form action (no page refresh)
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()); // Convert to object
+
+    try {
+      const res = await fetch(`${BACKEND_URL}/send-contactUsForm`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        form.reset(); // optional: clears the form
+      } else {
+        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+      }
+    } catch (err) {
+      console.error('Error:', err);
+      document.getElementById('formMessage').innerHTML = `<p style="color: red;">Something went wrong!</p>`;
+    }
+  });
+</script>
+</body>
+</html>
