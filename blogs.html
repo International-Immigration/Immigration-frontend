@@ -537,7 +537,7 @@
   <!-- NAVIGATION BAR -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo"><img src="./assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="LOGO"></div>
+            <div class="logo"><img src="assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="LOGO"></div>
 
             <input type="checkbox" id="menu-toggle" />
             <label class="hamburger" for="menu-toggle">
@@ -547,9 +547,9 @@
             </label>
 
             <div class="nav-links">
-                <a href="./index.html">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./index.html#visa-services-wrapper">Services</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#visa-services-wrapper">Services</a>
 
                 <div class="dropdown">
                     <div class="selected">Languages
@@ -558,15 +558,15 @@
                         </svg>
                     </div>
                     <div class="options">
-                        <a href="./german.html">German</a>
-                        <a href="./french.html">French</a>
-                        <a href="./ielts.html">IELTS</a>
-            <a href="./toefl.html">Toefl</a>
+                        <a href="Immigration-main/indexG.html">German</a>
+                        <a href="french.html">French</a>
+                        <a href="ielts.html">IELTS</a>
+            <a href="/Tf_index.html">Toefl</a>
                     </div>
                 </div>
 
-                <a href="./contact.html">Contact</a>
-                <a href="./blogs.html">Blogs</a>
+                <a href="contact.html">Contact</a>
+                <a href="blogs.html">Blogs</a>
             </div>
         </div>
     </nav>
@@ -605,7 +605,7 @@
       <!-- Left Column -->
       <div class="footer-left">
         <div class="footer-logo">
-          <img src="./assets/assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="Logo" />
+          <img src="assetsM/INTERNATIONAL IMMIGRATION LOGO LOCKUP 2 TRANSPARENT.png" alt="Logo" />
         </div>
         <p>
           Your premier destination for comprehensive Educational Consulting Services. We empower ambitious students worldwide with the knowledge and guidance they need to excel in their pursuit of higher education.
@@ -624,9 +624,9 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="index.html#visa-services-wrapper">Services</a></li>
+          <li><a href="#">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="#">Blogs</a></li>
         </ul>
       </div>
 
@@ -645,81 +645,119 @@
   </footer>
 
   <script>
-  const BACKEND_URL = "https://immigration-backend-gj2j.onrender.com";
+    function escapeHTML(str) {
+      if (!str) return '';
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
 
-  function truncateText(text, maxLength = 200) {
-    if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength) + "...";
-  }
+    function truncateText(text, limit = 200) {
+      return text.length > limit ? text.slice(0, limit) + "..." : text;
+    }
 
-  function formatDate(dateString) {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  }
+    function openModal(title, content) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalContent').innerText = content;
+      document.getElementById('blogModal').style.display = 'block';
+    }
 
-  function escapeHTML(str) {
-    return str.replace(/[&<>'"]/g, tag =>
-      ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        "'": "&#39;",
-        '"': "&quot;",
-      }[tag] || tag)
-    );
-  }
+    function closeModal() {
+      document.getElementById('blogModal').style.display = 'none';
+    }
 
-  fetch(`${BACKEND_URL}/blogs`)
-    .then(res => res.json())
-    .then(data => {
-      const blogContainer = document.getElementById("blog-container");
-      blogContainer.innerHTML = "";
+    fetch('/api/blogs')
+      .then(res => res.json())
+      .then(data => {
+        const latestBlogContainer = document.getElementById('latest-blog');
+        const previousBlogsContainer = document.getElementById('previous-blogs');
 
-      data.forEach(blog => {
-        const fullText = escapeHTML(blog.content);
-        const truncated = truncateText(fullText);
-        const isTruncated = fullText.length > 200;
-
-        const blogCard = document.createElement("div");
-        blogCard.classList.add("blog-card");
-
-        blogCard.innerHTML = `
-          <img src="${blog.image}" alt="Blog Image" />
-          <div class="text-section">
-            <h3 class="blog-title">${escapeHTML(blog.title)}</h3>
-            <p class="blog-text">${isTruncated ? truncated : fullText}</p>
-            <p class="date"><strong>Date:</strong> ${formatDate(blog.createdAt)}</p>
-            ${isTruncated ? '<button class="read-toggle">Read more</button>' : ""}
-          </div>
-        `;
-
-        // Handle Read more / Read less toggle
-        const toggleBtn = blogCard.querySelector(".read-toggle");
-        if (toggleBtn) {
-          toggleBtn.addEventListener("click", () => {
-            const textElement = blogCard.querySelector(".blog-text");
-            if (toggleBtn.innerText === "Read more") {
-              textElement.innerText = fullText;
-              toggleBtn.innerText = "Read less";
-            } else {
-              textElement.innerText = truncated;
-              toggleBtn.innerText = "Read more";
-            }
+        const formatDate = (dateStr) => {
+          const date = new Date(dateStr);
+          return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
           });
+        };
+
+        function createBlogCard(blog, isLatest = false) {
+          const fullText = escapeHTML(blog.content);
+          const truncated = truncateText(fullText);
+          const isTruncated = fullText.length > 200;
+
+          const blogCard = document.createElement('div');
+          blogCard.className = 'blog-card';
+
+          blogCard.innerHTML = `
+            <img src="${blog.imageUrl}" alt="Blog Image" />
+            <div class="text-section">
+              <h3 class="blog-title">${escapeHTML(blog.title)}</h3>
+              <p class="blog-text">${isTruncated ? truncated : fullText}</p>
+              <p class="date"><strong>Date:</strong> ${formatDate(blog.date)}</p>
+              ${isTruncated ? '<button class="read-toggle">Read more</button>' : ''}
+            </div>
+          `;
+
+          const btn = blogCard.querySelector('.read-toggle');
+          if (btn) {
+            btn.addEventListener('click', () => openModal(blog.title, blog.content));
+          }
+
+          return blogCard;
         }
 
-        blogContainer.appendChild(blogCard);
+        if (data.length > 0) {
+          latestBlogContainer.appendChild(createBlogCard(data[0], true));
+          data.slice(1).forEach(blog => {
+            previousBlogsContainer.appendChild(createBlogCard(blog));
+          });
+        } else {
+          latestBlogContainer.innerHTML = "<p>No blogs yet.</p>";
+        }
+      })
+      .catch(err => {
+        console.error("Error fetching blogs:", err);
       });
-    })
-    .catch(err => {
-      console.error("Error fetching blogs:", err);
-    });
-</script>
-
-
+      // NAVBAR++++++++++++
+           // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      
+      // Handle dropdowns in mobile view
+      const dropdowns = document.querySelectorAll(".dropdown");
+      
+      dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector(".selected");
+        
+        selected.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdown.classList.toggle("active");
+          }
+        });
+      });
+      
+      // Close dropdowns when clicking outside
+      document.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+          dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("active");
+            }
+          });
+          
+          // Also close the mobile menu if clicking outside
+          if (!e.target.closest(".nav-container") && menuToggle.checked) {
+            menuToggle.checked = false;
+            navLinks.style.display = "none";
+          }
+        }
+      });
+  </script>
 </body>
 </html>
