@@ -645,6 +645,8 @@
   </footer>
 
   <script>
+    const BACKEND_URL = "https://immigration-backend-gj2j.onrender.com";
+
     function escapeHTML(str) {
       if (!str) return '';
       return str
@@ -669,7 +671,7 @@
       document.getElementById('blogModal').style.display = 'none';
     }
 
-    fetch('/api/blogs')
+    fetch(`${BACKEND_URL}/api/blogs`)
       .then(res => res.json())
       .then(data => {
         const latestBlogContainer = document.getElementById('latest-blog');
