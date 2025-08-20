@@ -670,7 +670,7 @@
       document.getElementById('blogModal').style.display = 'none';
     }
 
-    fetch(`${BACKEND_URL}/api/blogs`)
+    fetch(`${BACKEND_URL}/blogs`)
       .then(res => res.json())
       .then(data => {
         const latestBlogContainer = document.getElementById('latest-blog');
