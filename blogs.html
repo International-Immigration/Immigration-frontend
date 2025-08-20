@@ -671,7 +671,7 @@
       document.getElementById('blogModal').style.display = 'none';
     }
 
-    fetch(`${BACKEND_URL}/api/blogs`)
+    fetch(`https://immigration-backend-gj2j.onrender.com/api/blogs`)
       .then(res => res.json())
       .then(data => {
         const latestBlogContainer = document.getElementById('latest-blog');
