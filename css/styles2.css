@@ -1435,7 +1435,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 48px;
   background: linear-gradient(to right, #ff2200, #ee0979);
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
 }
 
