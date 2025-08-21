@@ -735,7 +735,7 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
 <script src="./js/mainG.js"></script>
 <script>
    //backend url to be updated
-        const BACKEND_URL = "https://immigration-backend-gj2j.onrender.com";
+        const BACKEND_URL = "https://immigration-backend-j1bf.onrender.com";
   document.getElementById('contactForm').addEventListener('submit', async function (e) {
     e.preventDefault(); // Prevent default form action (no page refresh)
 
@@ -753,10 +753,10 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
       });
 
       if (res.ok) {
-        document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        document.getElementById('formMessage').innerHTML = `<p style="color: green; padding-top: 25px; text-align: center;">Email sent successfully!</p>`;
         form.reset(); // optional: clears the form
       } else {
-        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+        document.getElementById('formMessage').innerHTML = `<p style="color: red; padding-top: 25px; text-align: center;">Failed to send email.</p>`;
       }
     } catch (err) {
       console.error('Error:', err);
@@ -782,10 +782,10 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
       });
 
       if (res.ok) {
-        document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        document.getElementById('formMessage').innerHTML = `<p style="color: green; padding-top: 25px; text-align: center;">Email sent successfully!</p>`;
         form.reset(); // optional: clears the form
       } else {
-        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+        document.getElementById('formMessage').innerHTML = `<p style="color: red; padding-top: 25px; text-align: center;">Failed to send email.</p>`;
       }
     } catch (err) {
       console.error('Error:', err);
@@ -813,11 +813,11 @@ document.getElementById("german-form").addEventListener("submit", async function
     const data = await response.json();
 
     if (data.success) {
-      document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+      document.getElementById('formMessage').innerHTML = `<p style="color: green; padding-top: 25px; text-align: center;">Email sent successfully!</p>`;
         form.reset(); 
       document.getElementById("german-modal").style.display = "none";
     } else {
-        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+        document.getElementById('formMessage').innerHTML = `<p style="color: red; padding-top: 25px; text-align: center;">Failed to send email.</p>`;
     }
   } catch (error) {
     console.error("Error:", error);

@@ -28,7 +28,7 @@
       <div class="nav-links">
         <a href="./index.html">Home</a>
         <a href="./about.html">About</a>
-        <a href="#visa-services-wrapper">Services</a>
+        <a href="./index.html#visa-services-wrapper">Services</a>
 
         <div class="dropdown">
           <div class="selected">Languages
@@ -59,7 +59,7 @@
          <p class="p2">Expert trainers • Proven methods • Guaranteed results</p>
       <div class="buttons">
         <button class="btn btn-white" onclick="openModal()">Book Free Demo</button>
-        <button class="btn btn-red"> <a href="contact.html">Talk to a Counselor</a></button>
+        <button class="btn btn-red" onclick="window.location.href='./contact.html';"> <a href="contact.html">Talk to a Counselor</a></button>
       </div>
       <div class="stats">
         <div class="stat-item">
@@ -714,7 +714,7 @@
 
       <div class="faq-sidebar-ielts">
         <p>Still have more questions? We’re happy to help!</p>
-        <a href="contact.html" class="contact-btn-ielts">Contact Support</a>
+        <a href="contact.html" class="contact-btn-ielts">Contact Support <i class="fa-solid fa-headset" style="margin-left: 8px;"></i></a>
       </div>
     </div>
   </section>
@@ -754,7 +754,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="./index.html#visa-services-wrapper">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="blogs.html">Blogs</a></li>
         </ul>
@@ -794,7 +794,7 @@
 </script>
 <script>
    //backend url to be updated
-        const BACKEND_URL = "https://immigration-backend-gj2j.onrender.com";
+        const BACKEND_URL = "https://immigration-backend-j1bf.onrender.com";
   document.getElementById('ielts-demo').addEventListener('submit', async function (e) {
     e.preventDefault(); // Prevent default form action (no page refresh)
 

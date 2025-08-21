@@ -639,6 +639,7 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
         <textarea placeholder="Any other queries?" name="message"></textarea>
         <button type="submit" class="french-form-submit">Book Class</button>
       </form>
+      <div id="formMessage"></div>
     </div>
   </section>
   <!-- WhatsApp Floating Help Button -->
@@ -676,7 +677,7 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="index.html#visa-services-wrapper">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="blogs.html">Blogs</a></li>
         </ul>
@@ -698,7 +699,7 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
 </body>
 <script>
    //backend url to be updated
-        const BACKEND_URL = "https://immigration-backend-gj2j.onrender.com";
+        const BACKEND_URL = "https://immigration-backend-j1bf.onrender.com";
   document.getElementById('inquiryForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -725,15 +726,14 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
       const text = await res.text();
 
       if (res.ok) {
-        alert("✅ Email sent successfully!");
-        form.reset();
+        document.getElementById('formMessage').innerHTML = `<p style="color: green; padding-top: 25px; text-align: center;">Email sent successfully!</p>`;
+        form.reset(); // optional: clears the form
       } else {
-        alert("❌ Failed to send email.");
+        document.getElementById('formMessage').innerHTML = `<p style="color: red; padding-top: 25px; text-align: center;">Failed to send email.</p>`;
       }
-
     } catch (err) {
-      console.error("Error submitting form:", err);
-      alert("❌ An error occurred.");
+      console.error('Error:', err);
+      document.getElementById('formMessage').innerHTML = `<p style="color: red;">Something went wrong!</p>`;
     }
   });
 </script>
@@ -773,10 +773,10 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
       });
 
       if (res.ok) {
-        document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        document.getElementById('formMessage').innerHTML = `<p style="color: white; padding-top: 25px; text-align: center;">Email sent successfully!</p>`;
         form.reset(); // optional: clears the form
       } else {
-        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+        document.getElementById('formMessage').innerHTML = `<p style="color: red; padding-top: 25px; text-align: center;">Failed to send email.</p>`;
       }
     } catch (err) {
       console.error('Error:', err);

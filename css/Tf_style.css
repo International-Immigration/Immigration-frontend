@@ -305,8 +305,9 @@ body{
         }
         
         .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: gold;
             border-color: rgba(255, 255, 255, 0.5);
+            color: white;
         }
         
         .stats {
@@ -324,7 +325,7 @@ body{
             backdrop-filter: blur(5px);
             padding: 0.8rem 1.2rem;
             border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 0.5px solid #28C08E;
             transition: all 0.3s ease;
         }
         
@@ -572,7 +573,7 @@ body{
             }
             
             .stat-item {
-                width: 100%;
+                width: 90%;
                 justify-content: center;
             }
             
@@ -1103,6 +1104,7 @@ body{
                 width: 44px;
                 height: 44px;
                 font-size: 1.1rem;
+                background: #063A64;
             }
             
             .TFL-stru-mobile-title {
@@ -1795,6 +1797,7 @@ body{
             }
             .englist-test-hed{
               font-size: 2rem;
+              padding-top: 15px;
             }
             .Cource-Type-title{
               font-size: 2rem;

@@ -61,7 +61,7 @@
 
     .options {
       position: absolute;
-      top: 110%;
+      top: 100%;
       left: 0;
       background: linear-gradient(135deg, rgb(14, 110, 190) 0%, #0d44da 100%);
       border-radius: 4px;
@@ -1289,6 +1289,7 @@
       box-shadow: 0 12px 24px rgba(0,0,0,0.06);
       overflow: hidden;
       padding: 2.5rem;
+      display: flex;
     }
 
     .faq-questions {
@@ -1333,7 +1334,7 @@
     }
 
     .faq-item.active .faq-icon {
-      transform: rotate(45deg);
+      transform: rotate(0deg);
     }
 
     .faq-sidebar {
@@ -2407,6 +2408,7 @@
   font-weight: bold;
   margin-bottom: 2rem;
   color: #111;
+  font-family: sans-serif;
 }
 
 .french-form-container {

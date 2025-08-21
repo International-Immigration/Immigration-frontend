@@ -35,7 +35,7 @@
       <div class="nav-links">
         <a href="./index.html">Home</a>
         <a href="./about.html">About</a>
-        <a href="#visa-services-wrapper">Services</a>
+        <a href="./index.html#visa-services-wrapper">Services</a>
 
         <div class="dropdown">
           <div class="selected">Languages
@@ -981,7 +981,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="#visa-services-wrapper">Services</a></li>
+          <li><a href="./index.html#visa-services-wrapper">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="#">Blogs</a></li>
         </ul>
@@ -1009,7 +1009,7 @@
     <script src="./js/Tf_script.js"></script>
     <script>
          //backend url to be updated
-        const BACKEND_URL = "https://immigration-backend-gj2j.onrender.com";
+        const BACKEND_URL = "https://immigration-backend-j1bf.onrender.com";
   document.getElementById('contactFormToefl').addEventListener('submit', async function (e) {
     e.preventDefault(); // Prevent default form action (no page refresh)
 
@@ -1027,10 +1027,10 @@
       });
 
       if (res.ok) {
-        document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        document.getElementById('formMessage').innerHTML = `<p style="color: white; padding-top: 25px; text-align: center;">Email sent successfully!</p>`;
         form.reset(); // optional: clears the form
       } else {
-        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+        document.getElementById('formMessage').innerHTML = `<p style="color: red; padding-top: 25px; text-align: center;">Failed to send email.</p>`;
       }
     } catch (err) {
       console.error('Error:', err);
